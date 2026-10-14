@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>关于 · 王烁然安利站</title>
+<link rel="stylesheet" href="assets/css/fonts.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/collage.css">
+</head>
+<body>
+
+<div id="app-header"></div>
+
+<main class="wrap">
+  <section class="section">
+    <p class="eyebrow" id="page-eyebrow">About · 关于</p>
+    <h1 style="font-size:clamp(28px,4.5vw,44px)" id="page-title">关于本站</h1>
+  </section>
+
+  <section class="section" style="padding-top:20px">
+    <div class="panel" style="padding:34px 38px">
+      <article class="markdown" id="md"></article>
+    </div>
+  </section>
+</main>
+
+<div class="footer"><div id="app-footer"></div></div>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/config.js"></script>
+<script src="assets/js/icons.js"></script>
+<script src="assets/js/site.js"></script>
+<script src="assets/js/markdown.js"></script>
+<script>
+  Site.init('about');
+
+  async function load() {
+    var md = ABOUT_MD_FALLBACK;
+
+    try {
+      var res = await fetch('content/about.md', { cache: 'no-store' });
+      if (res.ok) {
+        var text = await res.text();
+        if (text && text.trim()) md = text;
+      }
+    } catch (e) {
+      /* 以 file:// 直接打开时无法 fetch，自动使用兜底内容 */
+    }
+
+    var out = await Markdown.renderSmart(md);
+    document.getElementById('md').innerHTML = out.html;
+  }
+
+  load();
+</script>
+<script src="assets/js/cursor.js"></script>
+</body>
+</html>

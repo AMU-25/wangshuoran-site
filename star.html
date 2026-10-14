@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>明星介绍 · 王烁然安利站</title>
+<link rel="stylesheet" href="assets/css/fonts.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/collage.css">
+</head>
+<body>
+
+<div id="app-header"></div>
+
+<main class="wrap">
+  <section class="section">
+    <div class="grid" style="grid-template-columns:.9fr 1.4fr;gap:24px">
+      <div class="card reveal">
+        <div class="thumb halftone"><img id="portrait" alt="王烁然" style="aspect-ratio:3/4"></div>
+        <div class="card-body">
+          <h3 style="margin-bottom:2px" id="s-name"></h3>
+          <p class="meta" id="s-alias"></p>
+        </div>
+      </div>
+      <div class="panel reveal" style="padding:30px 32px">
+        <p class="eyebrow" id="page-eyebrow">Profile · 明星介绍</p>
+        <h1 style="font-size:clamp(28px,4vw,42px);margin:0 0 6px" id="s-title"></h1>
+        <p style="color:var(--brand);font-weight:700;margin-bottom:18px" id="s-tagline"></p>
+        <p style="color:var(--muted)" id="s-lead"></p>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:16px" id="s-tags"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Details</p>
+        <h2>个人档案</h2>
+      </div>
+    </div>
+    <div class="grid grid-2">
+      <div class="panel reveal" style="padding:26px 28px">
+        <dl class="spec" id="spec-a"></dl>
+      </div>
+      <div class="panel reveal" style="padding:26px 28px">
+        <dl class="spec" id="spec-b"></dl>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Timeline</p>
+        <h2>成长时间线</h2>
+      </div>
+    </div>
+    <div class="panel reveal" style="padding:28px 30px">
+      <div class="timeline-scroll"><div class="timeline-rail" id="timeline"></div></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Gallery</p>
+        <h2>图集精选</h2>
+        <p class="sub">点击任意图片可放大查看，鼠标悬停可暂停滚动。</p>
+      </div>
+    </div>
+    <div class="gallery-marquee"><div class="gallery-track" id="gallery"></div></div>
+  </section>
+  <section class="section wrap">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Explore</p>
+        <h2>继续浏览其它板块</h2>
+      </div>
+    </div>
+    <div class="grid grid-4" id="sectors"></div>
+  </section>
+</main>
+
+<div class="footer"><div id="app-footer"></div></div>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/config.js"></script>
+<script src="assets/js/icons.js"></script>
+<script src="assets/js/site.js"></script>
+<script>
+  Site.init('star');
+
+  document.getElementById('portrait').src = Site.pic(STAR.portrait, 0.75);
+  document.getElementById('s-name').textContent = STAR.name;
+  document.getElementById('s-alias').textContent = '昵称：' + STAR.alias.join(' / ');
+  document.getElementById('s-title').innerHTML = Site.esc(STAR.name) +
+    ' <span style="font-size:.45em;color:var(--muted);letter-spacing:.28em">' + Site.esc(STAR.enName) + '</span>';
+  document.getElementById('s-tagline').textContent = '「' + STAR.tagline + '」';
+  document.getElementById('s-lead').textContent = STAR.lead;
+  document.getElementById('s-tags').innerHTML = STAR.tags.map(function (t) {
+    return '<span class="chip">' + Site.esc(t) + '</span>';
+  }).join('');
+
+  function profileRows() {
+    if (STAR.profile && STAR.profile.length) return STAR.profile;
+    return [
+      { label: '中文名', value: STAR.name }, { label: '英文名', value: STAR.enName },
+      { label: '昵称', value: STAR.alias.join(' / ') }, { label: '生日', value: STAR.birthday },
+      { label: '星座', value: STAR.zodiac },
+      { label: '身高 / 体重', value: STAR.height + ' · ' + STAR.weight },
+      { label: '出生地', value: STAR.hometown }, { label: '当前身份', value: STAR.debut },
+      { label: '经纪公司', value: STAR.company }, { label: '粉丝名', value: STAR.fandom },
+      { label: '应援色', value: STAR.color }
+    ];
+  }
+  function spec(list) {
+    return list.map(function (r) {
+      return '<dt>' + Site.esc(r.label) + '</dt><dd>' + Site.esc(r.value) + '</dd>';
+    }).join('');
+  }
+  var _rows = profileRows();
+  var _mid = Math.ceil(_rows.length / 2);
+  document.getElementById('spec-a').innerHTML = spec(_rows.slice(0, _mid));
+  document.getElementById('spec-b').innerHTML = spec(_rows.slice(_mid));
+
+  document.getElementById('timeline').innerHTML = TIMELINE.map(function (t, i) {
+    var side = (i % 2 === 0) ? 'up' : 'down';
+    return '<div class="tl-node ' + side + '">' +
+      '<div class="tl-card">' + Site.esc(t.text) + '</div>' +
+      '<span class="tl-marker">' + Site.esc(t.year) + '</span>' +
+      '</div>';
+  }).join('');
+
+  // 时间轴：按住拖拽横向滚动（缓动跟随 + 松手惯性，隐藏滚动条）
+  (function enableTimelineDrag(){
+    var el = document.querySelector('.timeline-scroll');
+    if(!el) return;
+    var target = el.scrollLeft, actual = el.scrollLeft, vel = 0;
+    var dragging = false, moved = false, lastX = 0, lastT = 0, raf = null;
+    function maxScroll(){ return Math.max(0, el.scrollWidth - el.clientWidth); }
+    function frame(){
+      if(dragging){
+        actual += (target - actual) * 0.22;          // 缓动跟随
+      } else {
+        target += vel; vel *= 0.93;                   // 摩擦衰减
+        actual += (target - actual) * 0.22;
+        if(Math.abs(vel) < 0.4 && Math.abs(target - actual) < 0.6){ actual = target; el.scrollLeft = actual; raf = null; return; }
+      }
+      target = Math.max(0, Math.min(target, maxScroll()));
+      actual = Math.max(0, Math.min(actual, maxScroll()));
+      el.scrollLeft = actual;
+      raf = requestAnimationFrame(frame);
+    }
+    function ensure(){ if(raf === null) raf = requestAnimationFrame(frame); }
+    el.style.cursor = 'grab';
+    el.addEventListener('mousedown', function(e){
+      dragging = true; moved = false; vel = 0;
+      target = el.scrollLeft; actual = el.scrollLeft;
+      lastX = e.pageX; lastT = performance.now();
+      el.style.cursor = 'grabbing'; ensure();
+    });
+    window.addEventListener('mouseup', function(){
+      if(!dragging) return;
+      dragging = false; el.style.cursor = 'grab'; ensure();
+    });
+    el.addEventListener('mousemove', function(e){
+      if(!dragging) return;
+      var now = performance.now(), dx = e.pageX - lastX, dt = (now - lastT) || 16;
+      if(Math.abs(dx) > 3) moved = true;
+      target = Math.max(0, Math.min(target - dx, maxScroll()));
+      vel = Math.max(-45, Math.min(45, -dx / dt * 16));
+      lastX = e.pageX; lastT = now; ensure();
+    });
+    el.addEventListener('dragstart', function(e){ e.preventDefault(); });
+    el.addEventListener('click', function(e){ if(moved){ e.preventDefault(); e.stopPropagation(); } }, true);
+  })();
+
+  function galleryList() {
+    if (STAR.gallery && STAR.gallery.length) return STAR.gallery;
+    return MATERIALS.filter(function (m) { return m.cat === '写真' || m.cat === '活动'; }).slice(0, 8);
+  }
+  function gmItem(g) {
+    var src = Site.pic(g, 0.75);
+    var title = g.title || '';
+    var source = g.source || '';
+    return '<div class="gm-item" data-src="' + Site.esc(src) + '" data-cap="' + Site.esc(title) + '" data-source="' + Site.esc(source) + '">' +
+      '<img src="' + src + '" alt="' + Site.esc(title) + '">' +
+      (title ? '<div class="gm-cap">' + Site.esc(title) + '</div>' : '') +
+      '</div>';
+  }
+  var gl = galleryList();
+  var gtrack = document.getElementById('gallery');
+
+  // 跑马灯：按视口宽度动态重复足够份数（至少 2 份），用单份宽度做 rAF 模运算回卷，
+  // 保证任意屏幕（含宽屏图少时）都铺满且无断档
+  (function startMarquee(){
+    var pos = 0, raf = null, last = 0, paused = false, copyWidth = 0, reps = 2;
+    var SPEED = 0.05; // px/ms（约 50px/s）
+
+    function renderCopies(n){
+      var html = '';
+      for(var i=0;i<n;i++) html += gl.map(gmItem).join('');
+      gtrack.innerHTML = html;
+    }
+    function imgsReady(cb){
+      var imgs = gtrack.querySelectorAll('img');
+      var pending = imgs.length;
+      if(!pending){ cb(); return; }
+      var done = function(){ if(--pending <= 0) cb(); };
+      imgs.forEach(function(im){
+        if(im.complete && im.naturalWidth){ done(); }
+        else { im.addEventListener('load', done); im.addEventListener('error', done); }
+      });
+    }
+    function resolve(){
+      copyWidth = gtrack.scrollWidth / reps;
+      var vw = gtrack.parentElement.clientWidth || window.innerWidth;
+      var need = (copyWidth > 0) ? Math.max(2, Math.ceil(vw / copyWidth) + 1) : 2;
+      if(need > reps){            // 单份不足以铺满视口 → 增加份数后重新测量
+        reps = need;
+        renderCopies(reps);
+        imgsReady(resolve);
+      }
+    }
+    function layout(){
+      reps = 2;
+      renderCopies(reps);
+      imgsReady(resolve);
+    }
+    function step(now){
+      var dt = now - last; last = now;
+      if(!paused && copyWidth > 0){
+        pos -= SPEED * dt;
+        while(pos <= -copyWidth) pos += copyWidth;
+        gtrack.style.transform = 'translate3d(' + pos + 'px,0,0)';
+      }
+      raf = requestAnimationFrame(step);
+    }
+    function begin(){ if(raf) return; last = performance.now(); raf = requestAnimationFrame(step); }
+
+    layout();
+    begin();
+    window.addEventListener('load', layout);
+    var rt;
+    window.addEventListener('resize', function(){ clearTimeout(rt); rt = setTimeout(layout, 200); });
+
+    var wrap = gtrack.parentElement;
+    wrap.addEventListener('mouseenter', function(){ paused = true; });
+    wrap.addEventListener('mouseleave', function(){ paused = false; last = performance.now(); });
+  })();
+
+  document.addEventListener('click', function (e) {
+    var item = e.target.closest('.gm-item');
+    if (item) {
+      Site.lightbox(item.getAttribute('data-src'), item.getAttribute('data-cap'), item.getAttribute('data-source'));
+      return;
+    }
+    var img = e.target.closest('img[data-src]');
+    if (img) Site.lightbox(img.getAttribute('data-src'), img.getAttribute('data-cap'));
+  });
+  Site.renderSectors('sectors', 'star');
+</script>
+<script src="assets/js/cursor.js"></script>
+</body>
+</html>

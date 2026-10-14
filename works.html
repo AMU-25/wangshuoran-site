@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>原创音乐 · 王烁然安利站</title>
+<link rel="stylesheet" href="assets/css/fonts.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/collage.css">
+</head>
+<body>
+
+<div id="app-header"></div>
+
+<main class="wrap">
+  <section class="section">
+    <p class="eyebrow" id="page-eyebrow">Original · 原创音乐</p>
+    <h1 style="font-size:clamp(28px,4.5vw,44px)" class="press-title flicker" id="page-title">他的每一首作品与舞台</h1>
+    <p id="page-sub" style="color:var(--muted);max-width:60ch">
+      音乐、综艺、舞台作品全收录。点击卡片可查看作品详情。
+    </p>
+  </section>
+
+  <section class="section" style="padding-top:20px">
+    <div class="filters">
+      <span id="catChips"></span>
+      <input class="search" id="q" type="search" placeholder="搜索歌名">
+      <span class="chip" id="count"></span>
+      <button class="btn btn-sm" id="sortBtn" type="button" style="margin-left:auto">时间 · 倒序 ▼</button>
+    </div>
+    <div class="grid grid-4" id="list"></div>
+
+    <div class="empty" id="empty" style="display:none">没有找到匹配的作品，换个关键词试试。</div>
+  </section>
+
+  <section class="section wrap">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Explore</p>
+        <h2>继续浏览其它板块</h2>
+      </div>
+    </div>
+    <div class="grid grid-4" id="sectors"></div>
+  </section>
+</main>
+
+<div class="footer"><div id="app-footer"></div></div>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/config.js"></script>
+<script src="assets/js/icons.js"></script>
+<script src="assets/js/site.js"></script>
+<script>
+  Site.init('works');
+
+  Site.list({
+    rootId: 'list',
+    page: 'works',
+    data: WORKS,
+    sortKey: 'year',
+    noun: '项',
+    catKey: 'cat',
+    catAttr: 'data-cat',
+    cats: (typeof CATEGORIES !== 'undefined' && CATEGORIES && CATEGORIES.works)
+      ? CATEGORIES.works.slice() : ['音乐', '综艺', '舞台'],
+    search: function (w) { return w.title + w.role + w.year + w.cat + w.desc; },
+    card: function (w) {
+      var src = Site.pic(w.art, 0.75);
+      return '<article class="card reveal" data-id="' + w.id + '">' +
+        '<div class="thumb halftone" style="aspect-ratio:1/1"><img src="' + src + '" alt="' + Site.esc(w.title) + '" loading="lazy" decoding="async">' +
+        '<span class="badge">' + w.cat + ' · ' + w.year + '</span></div>' +
+        '<div class="card-body"><h3>' + Site.esc(w.title) + '</h3>' +
+        '<p class="meta">' + Site.esc(w.role) + '</p>' +
+        '<p class="desc">' + Site.esc(w.desc) + '</p></div></article>';
+    }
+  });
+
+  function detail(id) {
+    var w = WORKS.filter(function (x) { return x.id === id; })[0];
+    if (!w) return;
+    var src = Site.pic(w.art, 0.75);
+    Site.openModal(
+      '<div class="modal-body">' +
+        '<div class="media"><img src="' + src + '" alt="' + Site.esc(w.title) + '"></div>' +
+        '<div class="info">' +
+          '<span class="chip">' + w.cat + '</span>' +
+          '<h3 style="margin:12px 0 4px">' + Site.esc(w.title) + '</h3>' +
+          '<p class="meta" style="color:var(--muted);margin:0 0 14px">' + w.year + ' · ' + Site.esc(w.role) + '</p>' +
+          '<p>' + Site.esc(w.desc) + '</p>' +
+          '<dl class="spec" style="margin-top:16px">' +
+            '<dt>类型</dt><dd>' + w.cat + '</dd>' +
+            '<dt>时间</dt><dd>' + w.year + '</dd>' +
+            '<dt>首发</dt><dd>' + Site.esc(w.role) + '</dd>' +
+            (w.guide ? '<dt>指路</dt><dd>' + Site.linkify(w.guide) + '</dd>' : '') +
+          '</dl>' +
+          '<div style="margin-top:18px"><button class="btn btn-sm" data-close>关闭</button></div>' +
+        '</div>' +
+      '</div>'
+    );
+  }
+
+  document.getElementById('list').addEventListener('click', function (e) {
+    var card = e.target.closest('.card[data-id]');
+    if (card) detail(card.getAttribute('data-id'));
+  });
+</script>
+<script src="assets/js/cursor.js"></script>
+</body>
+</html>

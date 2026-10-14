@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>王烁然安利站 · 目录</title>
+<meta name="description" content="王烁然粉丝安利站：明星介绍、原创音乐、物料汇总、官方周边图鉴。">
+<link rel="stylesheet" href="assets/css/fonts.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/collage.css">
+<link rel="stylesheet" href="assets/css/mat.css">
+</head>
+<body>
+
+<!-- 卡纸单边撕纸滤镜（预览用） -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <filter id="mat-tear" x="-10%" y="-40%" width="120%" height="180%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.018 0.05" numOctaves="3" seed="4" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="12" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+</svg>
+
+<div id="app-header"></div>
+
+<main>
+  <section class="hero wrap">
+    <div class="hero-card reveal">
+      <div class="hero-grid">
+        <div>
+          <p class="eyebrow" id="hero-eyebrow">目录 · INDEX</p>
+          <h1 id="hero-name" class="press-title"></h1>
+          <p class="lead" id="hero-lead"></p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="star.html" data-cta="1">从「明星介绍」开始 →</a>
+            <a class="btn" href="works.html" data-cta="2">直接看作品</a>
+          </div>
+          <div class="hero-stats" id="hero-stats"></div>
+        </div>
+        <div class="hero-wall" role="img" aria-label="照片墙">
+          <div class="wall-frame wall-frame--main">
+            <img id="hero-img" alt="王烁然">
+          </div>
+          <div class="wall-frame wall-frame--b" id="wf-b"></div>
+          <div class="wall-frame wall-frame--c" id="wf-c"></div>
+          <span class="wall-frame wall-frame--empty wall-frame--e1"></span>
+          <span class="wall-frame wall-frame--empty wall-frame--e2"></span>
+          <span class="wall-frame wall-frame--empty wall-frame--e3"></span>
+          <div class="wall-frame wall-frame--accent">
+            <span class="wf-text">★ Cactus Kat on the track<span class="wf-cursor">_</span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section wrap" style="padding-top:30px">
+    <div class="checkin-card reveal">
+      <i class="tape tape-tl"></i>
+      <div>
+        <p class="eyebrow" id="checkin-eyebrow">Daily Check-in · 今日打卡</p>
+        <h3 id="checkin-title">为他点亮一颗星星</h3>
+        <p class="checkin-count">今日已点亮 <b id="ci-count">0</b> 颗星星<span class="checkin-tip" id="ci-tip"></span></p>
+        <div class="star-row" id="ci-stars"></div>
+      </div>
+      <div style="position:relative">
+        <button class="checkin-btn" id="ci-btn" type="button">
+          <span class="ico-svg" id="ci-btn-ico"></span><span>打卡 · 点亮星星</span>
+        </button>
+        <div class="spark-layer" id="ci-sparks"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section wrap">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow" id="sectors-eyebrow">Contents</p>
+        <h2 id="sectors-title">四个板块，慢慢认识他</h2>
+        <p class="sub" id="sectors-sub">从档案到作品，从物料到周边，一座站收录全部心动。</p>
+      </div>
+    </div>
+    <div class="grid grid-4" id="sectors"></div>
+  </section>
+
+  <section class="section wrap">
+    <div class="grid grid-2">
+      <div class="panel reveal" style="padding:26px 28px">
+        <h3 style="margin-bottom:14px" id="news-title">最新动态</h3>
+        <div class="timeline" id="news"></div>
+      </div>
+      <div class="panel reveal" style="padding:26px 28px">
+        <h3 style="margin-bottom:14px" id="quick-title">快速档案</h3>
+        <dl class="spec" id="quick"></dl>
+        <div style="margin-top:18px">
+          <a class="btn btn-sm" href="star.html">查看完整档案 →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div class="footer"><div id="app-footer"></div></div>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/config.js"></script>
+<script src="assets/js/icons.js"></script>
+<script src="assets/js/site.js"></script>
+<script>
+  Site.init('index');
+
+  var CFG = (typeof SITE_CONFIG !== 'undefined' && SITE_CONFIG) ? SITE_CONFIG : null;
+  var HOME = (CFG && CFG.home) ? CFG.home : {};
+  var siteName = (CFG && CFG.siteName) ? CFG.siteName : (STAR.name + '安利站');
+
+  document.title = siteName + ' · 目录';
+  var heroPrefix = HOME.heroPrefix || '认识一下';
+  document.getElementById('hero-name').innerHTML =
+    Site.esc(heroPrefix) + Site.esc(STAR.name) + '<span class="en">' + Site.esc(STAR.enName || '') + '</span>';
+  document.getElementById('hero-name').setAttribute('data-text', heroPrefix + STAR.name);
+  document.getElementById('hero-lead').textContent = HOME.heroLead || STAR.lead || '';
+  document.getElementById('hero-img').src = Site.pic(STAR.portrait, 0.75);
+  // 照片墙副照片：读后台配置（有 img 用真实照片，否则用占位画作）；无配置时回退默认文案
+  var WALL_B = HOME.heroWallB || { title: 'LIVE · 舞台', sub: 'TOUR 2024', from: '#a42423', to: '#160404', motif: 'vinyl' };
+  var WALL_C = HOME.heroWallC || { title: 'STUDIO · 创作', sub: 'DEMO 06', from: '#8f2b1f', to: '#020100', motif: 'wave' };
+  document.getElementById('wf-b').innerHTML = '<img alt="" src="' + Site.pic(WALL_B, 1.1) + '">';
+  document.getElementById('wf-c').innerHTML = '<img alt="" src="' + Site.pic(WALL_C, 0.92) + '">';
+  document.getElementById('hero-stats').innerHTML = STAR.stats.map(function (s) {
+    return '<div><b>' + s.n + '</b><span>' + Site.esc(s.l) + '</span></div>';
+  }).join('');
+
+  function setText(id, val) { var el = document.getElementById(id); if (el) el.textContent = val; }
+  setText('hero-eyebrow', HOME.eyebrow);
+  setText('checkin-eyebrow', HOME.checkinEyebrow);
+  setText('checkin-title', HOME.checkinTitle);
+  setText('sectors-eyebrow', HOME.sectorsEyebrow);
+  setText('sectors-title', HOME.sectorsTitle);
+  setText('sectors-sub', HOME.sectorsSub);
+  setText('news-title', HOME.newsTitle);
+  setText('quick-title', HOME.quickTitle);
+  var cta1 = document.querySelector('[data-cta="1"]'); if (cta1) cta1.textContent = HOME.cta1 || '从「明星介绍」开始 →';
+  var cta2 = document.querySelector('[data-cta="2"]'); if (cta2) cta2.textContent = HOME.cta2 || '直接看作品';
+
+  Site.renderSectors('sectors', 'index');
+
+  document.getElementById('news').innerHTML = NEWS.map(function (n) {
+    return '<div class="tl-item"><span class="tl-year">' + n.date + '</span><p>' + Site.esc(n.text) + '</p></div>';
+  }).join('');
+
+  function profileRows() {
+    if (STAR.profile && STAR.profile.length) return STAR.profile;
+    return [
+      { label: '生日', value: STAR.birthday }, { label: '星座', value: STAR.zodiac },
+      { label: '身高', value: STAR.height }, { label: '当前身份', value: STAR.debut },
+      { label: '粉丝名', value: STAR.fandom }, { label: '应援色', value: STAR.color }
+    ];
+  }
+  document.getElementById('quick').innerHTML = profileRows().slice(0, 5).map(function (r) {
+    return '<dt>' + Site.esc(r.label) + '</dt><dd>' + Site.esc(r.value) + '</dd>';
+  }).join('');
+
+  /* ---------- 打卡：点亮星星 ---------- */
+  (function () {
+    var KEY_C = 'wsr-checkin-count';
+    var KEY_D = 'wsr-checkin-date';
+    var elCount = document.getElementById('ci-count');
+    var elTip = document.getElementById('ci-tip');
+    var elStars = document.getElementById('ci-stars');
+    var btn = document.getElementById('ci-btn');
+    var layer = document.getElementById('ci-sparks');
+    if (!btn) return;
+
+    function read(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
+    function write(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+    function today() {
+      var d = new Date();
+      return d.getFullYear() + '-' + (d.getMonth() + 1) + '-' + d.getDate();
+    }
+
+    var count = parseInt(read(KEY_C) || '0', 10) || 0;
+    var last = read(KEY_D) || '';
+
+    // 每日 0 点归零：若存储日期不是今天，则累计数清零并记为今天
+    function ensureToday() {
+      var t = today();
+      if (last !== t) {
+        count = 0;
+        last = t;
+        write(KEY_C, '0');
+        write(KEY_D, t);
+      }
+    }
+    ensureToday();
+
+    if (window.Icon) {
+      var ico = document.getElementById('ci-btn-ico');
+      if (ico) ico.innerHTML = Icon.star5;
+    }
+
+    function render() {
+      elCount.textContent = count;
+      elTip.textContent = (count > 0 && last === today())
+        ? '· 今日已点亮'
+        : '· 今日还未打卡';
+
+      var show = Math.min(count, 12);
+      var html = '';
+      for (var i = 0; i < show; i++) {
+        html += '<span class="s ico-svg">' +
+          (window.Icon ? Icon.get(i % 2 ? 'star5' : 'star4') : '') + '</span>';
+      }
+      if (count > 12) html += '<span class="checkin-tip">× ' + count + '</span>';
+      if (!count) html = '<span class="checkin-tip">还没有星星，点右边按钮点亮第一颗</span>';
+      elStars.innerHTML = html;
+    }
+
+    function burst() {
+      if (!window.Icon) return;
+      var n = 14;
+      for (var i = 0; i < n; i++) {
+        var s = document.createElement('span');
+        s.className = 'spark ico-svg' + (i % 3 === 0 ? ' soft' : '');
+        s.innerHTML = Icon.get(i % 2 ? 'star5' : 'star4');
+        var ang = (Math.PI * 2 * i) / n + Math.random() * 0.4;
+        var dist = 55 + Math.random() * 95;
+        s.style.setProperty('--dx', (Math.cos(ang) * dist).toFixed(1) + 'px');
+        s.style.setProperty('--dy', (Math.sin(ang) * dist - 18).toFixed(1) + 'px');
+        s.style.animationDelay = (Math.random() * 0.12).toFixed(2) + 's';
+        layer.appendChild(s);
+        (function (el) {
+          setTimeout(function () { if (el.parentNode) el.parentNode.removeChild(el); }, 1250);
+        })(s);
+      }
+    }
+
+    btn.addEventListener('click', function () {
+      if (btn.classList.contains('is-loading')) return;
+      btn.classList.add('is-loading');
+      setTimeout(function () {
+        ensureToday();
+        count += 1;
+        write(KEY_C, String(count));
+        last = today();
+        write(KEY_D, last);
+        render();
+        burst();
+        btn.classList.remove('is-loading');
+      }, 480);
+    });
+
+    render();
+
+    // 页面持续打开时，于下一个本地 0 点自动归零，并循环预约次日
+    (function scheduleMidnight() {
+      var now = new Date();
+      var next = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1, 0, 0, 2);
+      setTimeout(function () {
+        ensureToday();
+        render();
+        scheduleMidnight();
+      }, next - now);
+    })();
+  })();
+</script>
+<script src="assets/js/cursor.js"></script>
+</body>
+</html>

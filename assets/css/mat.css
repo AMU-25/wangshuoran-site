@@ -1,0 +1,30 @@
+/* ==========================================================
+   图片框：月白卡纸 + 红色实色错位投影 + 黑色回形针
+   通过 site.js matify() 包裹图片容器实现
+   ========================================================== */
+
+/* 卡纸框：月白卡纸 + 硬边 + 实色偏移投影 */
+.mat-frame {
+  position: relative;
+  display: block;
+  padding: 12px 12px 14px;
+  background: var(--paper, #fff2df);
+  border: 2px solid var(--ink, #050403);
+  border-radius: 0;
+  box-shadow: 8px 8px 0 var(--brand, #a42423);
+}
+
+/* 撕纸条：粗野主义下取消（保留元素占位，避免 DOM 结构差异） */
+.mat-tear { display: none; }
+
+/* 回形针：黑色金属丝，别在卡纸右上 */
+.mat-clip {
+  position: absolute;
+  top: -24px;
+  right: 28px;
+  width: 30px;
+  height: 76px;
+  transform: rotate(8deg);
+  z-index: 6;
+}
+.mat-clip svg { width: 100%; height: 100%; display: block; }

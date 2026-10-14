@@ -1,0 +1,23 @@
+# 服务端 / 后台（GitHub Pages 为纯静态托管，线上没有 /api，后台不可用）
+admin.html
+server.py
+server.js
+server.ps1
+start-server.ps1
+
+# 缓存、文档、日志、临时文件
+backups/
+__pycache__/
+*.log
+_server.*
+server.*.log
+DESIGN.md
+README.md
+package.json
+
+# content 只保留 about.md（about.html 通过 fetch 读取它），其余不纳入仓库
+content/*
+!content/about.md
+
+# 开发工具内部目录（非站点内容，不纳入仓库）
+.codebuddy/

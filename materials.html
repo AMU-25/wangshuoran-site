@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>物料汇总 · 王烁然安利站</title>
+<link rel="stylesheet" href="assets/css/fonts.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/collage.css">
+</head>
+<body>
+
+<div id="app-header"></div>
+
+<main class="wrap">
+  <section class="section">
+    <p class="eyebrow" id="page-eyebrow">Materials · 物料汇总</p>
+    <h1 style="font-size:clamp(28px,4.5vw,44px)" id="page-title">海报、写真、花絮，一次收齐</h1>
+    <p id="page-sub" style="color:var(--muted);max-width:60ch">
+      按分类浏览站内收录的物料，点击图片放大查看。当前展示的是占位素材，
+      把 <code>data.js</code> 里的 <code>art</code> 换成真实图片链接即可替换。
+    </p>
+  </section>
+
+  <section class="section" style="padding-top:20px">
+    <div class="filters">
+      <span id="catChips" class="cat-chips"></span>
+      <input class="search" id="q" type="search" placeholder="搜索物料标题…">
+      <span class="chip" id="count"></span>
+      <button class="btn btn-sm" id="sortBtn" type="button" style="margin-left:auto">时间 · 倒序 ▼</button>
+    </div>
+    <div class="grid grid-4" id="list"></div>
+    <div class="empty" id="empty" style="display:none">没有找到匹配的物料。</div>
+  </section>
+
+  <section class="section wrap">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Explore</p>
+        <h2>继续浏览其它板块</h2>
+      </div>
+    </div>
+    <div class="grid grid-4" id="sectors"></div>
+  </section>
+</main>
+
+<div class="footer"><div id="app-footer"></div></div>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/config.js"></script>
+<script src="assets/js/icons.js"></script>
+<script src="assets/js/site.js"></script>
+<script>
+  Site.init('materials');
+
+  var listAll = [];
+
+  Site.list({
+    rootId: 'list',
+    page: 'materials',
+    data: MATERIALS,
+    sortKey: 'date',
+    noun: '份',
+    catKey: 'cat',
+    catAttr: 'data-cat',
+    cats: (typeof CATEGORIES !== 'undefined' && CATEGORIES && CATEGORIES.materials)
+      ? CATEGORIES.materials.slice() : ['海报', '写真', '活动', '花絮', '壁纸'],
+    search: function (m) { return m.title + m.cat + m.date; },
+    card: function (m) {
+      var r = 1.5; // 缩略图统一横板 3:2
+      var src = Site.pic(m.art, r);
+      var pics = Site.pics(m.art || {});
+      var gal = pics.length > 1
+        ? '<span style="position:absolute;right:8px;top:8px;padding:3px 8px;font-size:12px;font-weight:700;' +
+          'background:rgba(2,1,0,.78);color:#fff;border-radius:4px">图 ' + pics.length + '</span>'
+        : '';
+      return '<figure class="item polaroid" style="cursor:zoom-in">' +
+        '<div style="position:relative">' +
+        '<img src="' + src + '" alt="' + Site.esc(m.title) + '" style="aspect-ratio:' + r + '" ' +
+        'data-src="' + src + '" data-cap="' + Site.esc(m.title + ' · ' + m.date) + '" ' +
+        'data-guide="' + Site.esc(m.guide || '') + '" loading="lazy" decoding="async">' + gal +
+        '</div>' +
+        '<figcaption class="cap">' +
+        '<span class="t">' + Site.esc(m.title) + '</span>' +
+        '<span class="c">' + Site.esc(m.cat) + '</span>' +
+        '<span class="d">' + Site.esc(m.date) + '</span></figcaption></figure>';
+    },
+    onRows: function (rows) { listAll = rows; }
+  });
+
+  // 点击卡片打开详情（多图画廊）
+  document.getElementById('list').addEventListener('click', function (e) {
+    var fig = e.target.closest('figure.item');
+    if (!fig) return;
+    var idx = Array.prototype.indexOf.call(this.children, fig);
+    if (idx < 0 || !listAll[idx]) return;
+    openMaterialDetail(listAll[idx]);
+  });
+
+  function openMaterialDetail(m) {
+    var imgs = Site.pics(m.art || {});
+    var guide = (m.guide || '').trim();
+    var info = '<div style="margin-top:6px;text-align:center"><h3 style="margin:0 0 6px">' + Site.esc(m.title) + '</h3>' +
+      '<p style="color:#caa;margin:0 0 8px">' + Site.esc(m.cat || '') + ' · ' + Site.esc(m.date || '') + '</p>' +
+      (guide ? '<div class="lb-guide">指路：' + Site.linkify(guide) + '</div>' : '') +
+      (imgs.length > 1 ? '<p style="color:#999;font-size:12px;margin:10px 0 0">共 ' + imgs.length + ' 张图，点击缩略图切换查看</p>' : '') +
+      '</div>';
+    Site.galleryModal({ imgs: imgs, alt: m.title, info: info, modalClass: 'mat-detail' });
+  }
+</script>
+<script src="assets/js/cursor.js"></script>
+</body>
+</html>
