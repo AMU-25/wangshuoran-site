@@ -163,7 +163,7 @@ const TIMELINE = [
     "text": "获评淄博市“新时代好少年”。"
   },
   {
-    "year": "2023.11",
+    "year": "2023",
     "text": "获评山东省“新时代好少年”；受邀参与联合国儿童基金会世界儿童日主题曲《在未来》MV制作。"
   },
   {
@@ -312,7 +312,7 @@ const WORKS = [
   },
   {
     "id": "w9",
-    "cat": "已上线",
+    "cat": "未上线",
     "title": "星星说",
     "year": "2026.3.15",
     "role": "微博(「听烁了么」#7)",
@@ -323,6 +323,9 @@ const WORKS = [
       "to": "#a42423",
       "title": "待补充",
       "sub": "",
+      "imgs": [
+        "assets/img/uploads/0ce1e27008094039b3ec5b0e1d258cb8.jpg"
+      ],
       "img": "assets/img/uploads/0ce1e27008094039b3ec5b0e1d258cb8.jpg"
     }
   },
@@ -998,7 +1001,7 @@ const MATERIALS = [
   },
   {
     "id": "m36",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "《肆意少年-突围》EP05",
     "date": "2025.8.8",
     "ratio": 1.5,
@@ -1016,7 +1019,7 @@ const MATERIALS = [
   },
   {
     "id": "m37",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "《肆意少年-突围》EP06",
     "date": "2025.8.15",
     "ratio": 1.5,
@@ -1034,7 +1037,7 @@ const MATERIALS = [
   },
   {
     "id": "m38",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "《肆意时光簿》EP07",
     "date": "2025.8.18",
     "ratio": 1.5,
@@ -1052,7 +1055,7 @@ const MATERIALS = [
   },
   {
     "id": "m39",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "《肆意少年》见面会——重庆场DAY1",
     "date": "2025.8.23",
     "ratio": 1.5,
@@ -1070,7 +1073,7 @@ const MATERIALS = [
   },
   {
     "id": "m40",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "《肆意少年》见面会——重庆场DAY2",
     "date": "2025.8.24",
     "ratio": 1.5,
@@ -1088,7 +1091,7 @@ const MATERIALS = [
   },
   {
     "id": "m41",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "《肆意时光簿》EP08",
     "date": "2025.8.25",
     "ratio": 1.5,
@@ -1106,7 +1109,7 @@ const MATERIALS = [
   },
   {
     "id": "m42",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "《肆意少年》见面会——青岛场DAY1",
     "date": "2025.8.30",
     "ratio": 1.5,
@@ -1124,7 +1127,7 @@ const MATERIALS = [
   },
   {
     "id": "m43",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "《肆意少年》见面会——青岛场DAY2",
     "date": "2025.8.31",
     "ratio": 1.5,
@@ -1142,7 +1145,7 @@ const MATERIALS = [
   },
   {
     "id": "m44",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "《肆意少年》见面会练习室联排记录",
     "date": "2025.9.6",
     "ratio": 1.5,
@@ -1160,7 +1163,7 @@ const MATERIALS = [
   },
   {
     "id": "m45",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "《随肆记 · 以梦为名》纪录片",
     "date": "2025.9.13",
     "ratio": 1.5,
@@ -1178,7 +1181,7 @@ const MATERIALS = [
   },
   {
     "id": "m46",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "《随肆记 · 踏风日记》纪录片",
     "date": "2025.9.14",
     "ratio": 1.5,
@@ -1196,7 +1199,7 @@ const MATERIALS = [
   },
   {
     "id": "m47",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "《星期五练习生》106：“海龟”不是“这个汤”",
     "date": "2025.10.17",
     "ratio": 1.5,
@@ -1216,7 +1219,7 @@ const MATERIALS = [
   },
   {
     "id": "m48",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "《星期五练习生》109:好想这样活一次",
     "date": "2025.11.07",
     "ratio": 1.5,
@@ -1235,7 +1238,7 @@ const MATERIALS = [
   },
   {
     "id": "m49",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "《星期五练习生》111:你的尖叫我的梦",
     "date": "2025.11.21",
     "ratio": 1.5,
@@ -1255,7 +1258,7 @@ const MATERIALS = [
   },
   {
     "id": "m50",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "11月考核实录-part2",
     "date": "2025.12.07",
     "ratio": 1.5,
@@ -1273,7 +1276,7 @@ const MATERIALS = [
   },
   {
     "id": "m51",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "11月考核part2-纪录片",
     "date": "2025.12.15",
     "ratio": 1.5,
@@ -1291,7 +1294,7 @@ const MATERIALS = [
   },
   {
     "id": "m52",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "《星期五练习生》114:今天不许好好唱",
     "date": "2025.12.19",
     "ratio": 1.5,
@@ -1310,7 +1313,7 @@ const MATERIALS = [
   },
   {
     "id": "m53",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "《星期五练习生》115：我们的“元”气值满了",
     "date": "2026.1.1",
     "ratio": 1.5,
@@ -1328,7 +1331,7 @@ const MATERIALS = [
   },
   {
     "id": "m54",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "《星期五练习生》116：神的主理人",
     "date": "2026.1.2",
     "ratio": 1.5,
@@ -1347,7 +1350,7 @@ const MATERIALS = [
   },
   {
     "id": "m55",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "2026新年音乐会「荣耀」练习室合集",
     "date": "2026.1.3",
     "ratio": 1.5,
@@ -1365,7 +1368,7 @@ const MATERIALS = [
   },
   {
     "id": "m56",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "2026新年音乐会《荣耀》舞台篇DAY1",
     "date": "2026.1.9",
     "ratio": 1.5,
@@ -1383,7 +1386,7 @@ const MATERIALS = [
   },
   {
     "id": "m57",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "2026新年音乐会《荣耀》VCR拍摄花絮",
     "date": "2026.1.10",
     "ratio": 1.5,
@@ -1401,7 +1404,7 @@ const MATERIALS = [
   },
   {
     "id": "m58",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "2026新年音乐会《荣耀》舞台篇DAY2",
     "date": "2026.1.16",
     "ratio": 1.5,
@@ -1419,7 +1422,7 @@ const MATERIALS = [
   },
   {
     "id": "m59",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "2026新年音乐会《荣耀》舞台篇DAY3",
     "date": "2026.1.23",
     "ratio": 1.5,
@@ -1437,7 +1440,7 @@ const MATERIALS = [
   },
   {
     "id": "m60",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "《星期五练习生》120：抽象的狼人杀",
     "date": "2026.1.30",
     "ratio": 1.5,
@@ -1458,7 +1461,7 @@ const MATERIALS = [
   },
   {
     "id": "m61",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "《星期五练习生》121：奇葩铁人六项",
     "date": "2026.2.6",
     "ratio": 1.5,
@@ -1477,7 +1480,7 @@ const MATERIALS = [
   },
   {
     "id": "m62",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "2026新年音乐会「荣耀」: 纪录片·【1】荣耀序章",
     "date": "2026.2.13",
     "ratio": 1.5,
@@ -1495,7 +1498,7 @@ const MATERIALS = [
   },
   {
     "id": "m63",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "2026新年音乐会「荣耀」: 纪录片·【3】灯亮之前",
     "date": "2026.2.15",
     "ratio": 1.5,
@@ -1513,7 +1516,7 @@ const MATERIALS = [
   },
   {
     "id": "m64",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "2026新年音乐会「荣耀」: 纪录片·【终】光的回响",
     "date": "2026.2.16",
     "ratio": 1.5,
@@ -1531,7 +1534,7 @@ const MATERIALS = [
   },
   {
     "id": "m65",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "《星期五练习生》122：《厨神争霸》",
     "date": "2026.2.16",
     "ratio": 1.5,
@@ -1549,7 +1552,7 @@ const MATERIALS = [
   },
   {
     "id": "m66",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "新春特别放送《马年串烧》",
     "date": "2026.2.17",
     "ratio": 1.5,
@@ -1567,7 +1570,7 @@ const MATERIALS = [
   },
   {
     "id": "m67",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "《新春荣耀大作战》EP1",
     "date": "2026.2.17",
     "ratio": 1.5,
@@ -1585,7 +1588,7 @@ const MATERIALS = [
   },
   {
     "id": "m68",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "《新春荣耀大作战》EP2",
     "date": "2026.2.18",
     "ratio": 1.5,
@@ -1603,7 +1606,7 @@ const MATERIALS = [
   },
   {
     "id": "m69",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "《YES! SIR》01：今天不卡关",
     "date": "2026.2.19",
     "ratio": 1.5,
@@ -1618,7 +1621,7 @@ const MATERIALS = [
   },
   {
     "id": "m70",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "《星期五练习生》123：《反差的LOVE》",
     "date": "2026.2.20",
     "ratio": 1.5,
@@ -1636,7 +1639,7 @@ const MATERIALS = [
   },
   {
     "id": "m71",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "《TLOG》02：《马年串烧》拍摄花絮",
     "date": "2026.2.22",
     "ratio": 1.5,
@@ -1654,7 +1657,7 @@ const MATERIALS = [
   },
   {
     "id": "m72",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "《4重奏团建日》01：十五的月亮十六圆",
     "date": "2026.3.3",
     "ratio": 1.5,
@@ -1672,7 +1675,7 @@ const MATERIALS = [
   },
   {
     "id": "m73",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "《YES! SIR》02：拳脚定乾坤",
     "date": "2026.3.7",
     "ratio": 1.5,
@@ -1690,7 +1693,7 @@ const MATERIALS = [
   },
   {
     "id": "m74",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "《轨迹的声音-调频04.2》ON AIR篇",
     "date": "2026.3.15",
     "ratio": 1.5,
@@ -1708,7 +1711,7 @@ const MATERIALS = [
   },
   {
     "id": "m75",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "《TLOG》05：《奔跑·LOVE LOVE LOVE》拍摄花絮",
     "date": "2026.3.22",
     "ratio": 1.5,
@@ -1726,7 +1729,7 @@ const MATERIALS = [
   },
   {
     "id": "m76",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "《成长档案NO.0315-拾音记》王烁然生日纪录片",
     "date": "2026.3.28",
     "ratio": 1.5,
@@ -1744,7 +1747,7 @@ const MATERIALS = [
   },
   {
     "id": "m77",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "《成长档案NO.0315-看风去》李煜东生日纪录片（出镜）",
     "date": "2026.3.28",
     "ratio": 1.5,
@@ -1762,7 +1765,7 @@ const MATERIALS = [
   },
   {
     "id": "m78",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "《YES! SIR》03：浪得起飞",
     "date": "2026.3.29",
     "ratio": 1.5,
@@ -1780,7 +1783,7 @@ const MATERIALS = [
   },
   {
     "id": "m79",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "《TLOG》06：3月短视频花絮",
     "date": "2026.3.30",
     "ratio": 1.5,
@@ -1798,7 +1801,7 @@ const MATERIALS = [
   },
   {
     "id": "m80",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "《4重奏团建日》02：愚人节特辑",
     "date": "2026.4.1",
     "ratio": 1.5,
@@ -1817,7 +1820,7 @@ const MATERIALS = [
   },
   {
     "id": "m81",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "「吾鹅训练记录」01：3月日常碎片掉落（一点出镜）",
     "date": "2026.4.2",
     "ratio": 1.5,
@@ -1836,7 +1839,7 @@ const MATERIALS = [
   },
   {
     "id": "m82",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "《成长档案NO.0319-真实童话》左奇函生日纪录片（视频祝福）",
     "date": "2026.4.2",
     "ratio": 1.5,
@@ -1855,7 +1858,7 @@ const MATERIALS = [
   },
   {
     "id": "m83",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "《YES！SIR》04:探头探脑侦探社（上）",
     "date": "2026.4.11",
     "ratio": 1.5,
@@ -1873,7 +1876,7 @@ const MATERIALS = [
   },
   {
     "id": "m84",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "《FUN肆·P2K》见面会练习室联排记录",
     "date": "2026.4.24",
     "ratio": 1.5,
@@ -1891,7 +1894,7 @@ const MATERIALS = [
   },
   {
     "id": "m85",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "《YES！SIR》05:探头探脑侦探社（下）",
     "date": "2026.4.25",
     "ratio": 1.5,
@@ -1909,7 +1912,7 @@ const MATERIALS = [
   },
   {
     "id": "m86",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "《TLOG》07：4月短视频花絮",
     "date": "2026.4.26",
     "ratio": 1.5,
@@ -1927,7 +1930,7 @@ const MATERIALS = [
   },
   {
     "id": "m87",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "《FUN肆·P2K》见面会舞台篇DAY1",
     "date": "2026.5.1",
     "ratio": 1.5,
@@ -1945,7 +1948,7 @@ const MATERIALS = [
   },
   {
     "id": "m88",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "《FUN肆·P2K》见面会舞台篇DAY2",
     "date": "2026.5.2",
     "ratio": 1.5,
@@ -1963,7 +1966,7 @@ const MATERIALS = [
   },
   {
     "id": "m89",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "《YES！SIR》06:搭子即天堂（上）",
     "date": "2026.5.4",
     "ratio": 1.5,
@@ -1981,7 +1984,7 @@ const MATERIALS = [
   },
   {
     "id": "m90",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "《YES！SIR》07:搭子即天堂（下）",
     "date": "2026.5.10",
     "ratio": 1.5,
@@ -1999,7 +2002,7 @@ const MATERIALS = [
   },
   {
     "id": "m91",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "《YES！SIR》08:胆量即天堂",
     "date": "2026.5.17",
     "ratio": 1.5,
@@ -2017,7 +2020,7 @@ const MATERIALS = [
   },
   {
     "id": "m92",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "《成长档案NO.0509-奔赴回望》陈奕恒生日纪录片（手工＋视频祝福）",
     "date": "2026.5.21",
     "ratio": 1.5,
@@ -2038,7 +2041,7 @@ const MATERIALS = [
   },
   {
     "id": "m93",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "《TLOG》08：5月日常训练实录",
     "date": "2026.5.22",
     "ratio": 1.5,
@@ -2056,7 +2059,7 @@ const MATERIALS = [
   },
   {
     "id": "m94",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "《轨迹的声音-调频04.2》苔痕篇",
     "date": "2026.5.24",
     "ratio": 1.5,
@@ -2074,7 +2077,7 @@ const MATERIALS = [
   },
   {
     "id": "m95",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "《成长档案NO.0511-光落在他的沙盘上》张桂源生日纪录片（语音＋视频祝福）",
     "date": "2026.5.25",
     "ratio": 1.5,
@@ -2094,7 +2097,7 @@ const MATERIALS = [
   },
   {
     "id": "m96",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "《成长档案NO.0517-下一站，盛夏》陈浚铭生日纪录片（视频祝福＋聚餐）",
     "date": "2026.5.29",
     "ratio": 1.5,
@@ -2115,7 +2118,7 @@ const MATERIALS = [
   },
   {
     "id": "m97",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "《TLOG》11:5月日常训练实录",
     "date": "2026.6.1",
     "ratio": 1.5,
@@ -2133,7 +2136,7 @@ const MATERIALS = [
   },
   {
     "id": "m98",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "《YES！SIR》09:《墨灵寻踪》",
     "date": "2026.6.6",
     "ratio": 1.5,
@@ -2151,7 +2154,7 @@ const MATERIALS = [
   },
   {
     "id": "m99",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "《TLOG》12:6月日常训练实录",
     "date": "2026.6.11",
     "ratio": 1.5,
@@ -2169,7 +2172,7 @@ const MATERIALS = [
   },
   {
     "id": "m100",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "《成长档案NO.0601-当我和世界“不一样”》杨博文生日纪录片（手工＋视频祝福）",
     "date": "2026.6.14",
     "ratio": 1.5,
@@ -2188,7 +2191,7 @@ const MATERIALS = [
   },
   {
     "id": "m101",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "《成长档案NO.0608-拼图》杨涵博生日纪录片（手工＋视频祝福）",
     "date": "2026.6.19",
     "ratio": 1.5,
@@ -2207,7 +2210,7 @@ const MATERIALS = [
   },
   {
     "id": "m102",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "《突围II破局》先导片：围城再建",
     "date": "2026.6.20",
     "ratio": 1.5,
@@ -2225,7 +2228,7 @@ const MATERIALS = [
   },
   {
     "id": "m103",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "《突围II破局》EP01：先放空的人，才有力气往前走（上）",
     "date": "2026.6.27",
     "ratio": 1.5,
@@ -2243,7 +2246,7 @@ const MATERIALS = [
   },
   {
     "id": "m104",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "《突围II破局》EP01：先放空的人，才有力气往前走（下）",
     "date": "2026.6.28",
     "ratio": 1.5,
@@ -2261,7 +2264,7 @@ const MATERIALS = [
   },
   {
     "id": "m105",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "《突围II破局》EP01：加更",
     "date": "2026.7.1",
     "ratio": 1.5,
@@ -2279,7 +2282,7 @@ const MATERIALS = [
   },
   {
     "id": "m106",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "《突围II破局》EP02：这一刻，重新开始（上）",
     "date": "2026.7.4",
     "ratio": 1.5,
@@ -2297,7 +2300,7 @@ const MATERIALS = [
   },
   {
     "id": "m107",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "《突围II破局》EP02：这一刻，重新开始（下）",
     "date": "2026.7.5",
     "ratio": 1.5,
@@ -2315,7 +2318,7 @@ const MATERIALS = [
   },
   {
     "id": "m108",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "《突围II破局》EP02：加更",
     "date": "2026.7.8",
     "ratio": 1.5,
@@ -2333,7 +2336,7 @@ const MATERIALS = [
   },
   {
     "id": "m109",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "2026TF家族运动会先导片-TF家族四代篇",
     "date": "2026.7.10",
     "ratio": 1.5,
@@ -2351,7 +2354,7 @@ const MATERIALS = [
   },
   {
     "id": "m110",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "《突围II破局》EP03：来自舞台的邀请函（上）",
     "date": "2026.7.11",
     "ratio": 1.5,
@@ -2369,7 +2372,7 @@ const MATERIALS = [
   },
   {
     "id": "m111",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "《突围II破局》EP03：来自舞台的邀请函（下）",
     "date": "2026.7.12",
     "ratio": 1.5,
@@ -2387,7 +2390,7 @@ const MATERIALS = [
   },
   {
     "id": "m112",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "《突围II破局》EP03：加更",
     "date": "2026.7.15",
     "ratio": 1.5,
@@ -2405,7 +2408,7 @@ const MATERIALS = [
   },
   {
     "id": "m113",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "《全世界陪我出发》练习室版",
     "date": "2026.7.16",
     "ratio": 1.5,
@@ -2423,7 +2426,7 @@ const MATERIALS = [
   },
   {
     "id": "m114",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "《突围II破局》EP04：有人在往上走（上）",
     "date": "2026.7.18",
     "ratio": 1.5,
@@ -2441,7 +2444,7 @@ const MATERIALS = [
   },
   {
     "id": "m115",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "《突围II破局》EP04：有人在往上走（下）",
     "date": "2026.7.19",
     "ratio": 1.5,
@@ -2459,7 +2462,7 @@ const MATERIALS = [
   },
   {
     "id": "m116",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "《突围II破局》EP04：加更",
     "date": "2026.7.22",
     "ratio": 1.5,
@@ -2477,7 +2480,7 @@ const MATERIALS = [
   },
   {
     "id": "m117",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "《成长档案NO.0704-满分答卷》官俊臣生日纪录片（集体祝福）",
     "date": "2026.7.24",
     "ratio": 1.5,
@@ -2488,14 +2491,15 @@ const MATERIALS = [
       "title": "待补充",
       "sub": "",
       "imgs": [
-        "assets/img/uploads/c6026672852f462382328017bbd5085f.jpg"
+        "assets/img/uploads/4ab94c3ae5d14d05a58b7abbcc84c18a.png",
+        "assets/img/uploads/ce40eec4596241918ada9a6fd471e906.png"
       ],
-      "img": "assets/img/uploads/c6026672852f462382328017bbd5085f.jpg"
+      "img": "assets/img/uploads/4ab94c3ae5d14d05a58b7abbcc84c18a.png"
     }
   },
   {
     "id": "m118",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "《突围II破局》EP05：你的位置，决定了你有多少选择（上）",
     "date": "2026.7.25",
     "ratio": 1.5,
@@ -2513,7 +2517,7 @@ const MATERIALS = [
   },
   {
     "id": "m119",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "《突围II破局》EP05：你的位置，决定了你有多少选择（上）",
     "date": "2026.7.26",
     "ratio": 1.5,
@@ -2531,7 +2535,7 @@ const MATERIALS = [
   },
   {
     "id": "m120",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "《2026TF家族运动会》Day1（上）",
     "date": "2026.7.29",
     "ratio": 1.5,
@@ -2549,7 +2553,7 @@ const MATERIALS = [
   },
   {
     "id": "m121",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "《2026TF家族运动会》Day1（下）",
     "date": "2026.7.29",
     "ratio": 1.5,
@@ -2567,7 +2571,7 @@ const MATERIALS = [
   },
   {
     "id": "m122",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "《突围II破局》EP05：加更",
     "date": "2026.7.29",
     "ratio": 1.5,
@@ -2585,7 +2589,7 @@ const MATERIALS = [
   },
   {
     "id": "m123",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "《2026TF家族运动会》Day2（上）",
     "date": "2026.7.30",
     "ratio": 1.5,
@@ -2603,7 +2607,7 @@ const MATERIALS = [
   },
   {
     "id": "m124",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "《2026TF家族运动会》Day2（下）",
     "date": "2026.7.30",
     "ratio": 1.5,
@@ -2621,7 +2625,7 @@ const MATERIALS = [
   },
   {
     "id": "m125",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "《TLOG》14：7月短视频花絮",
     "date": "2026.7.30",
     "ratio": 1.5,
@@ -2639,7 +2643,7 @@ const MATERIALS = [
   },
   {
     "id": "m126",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "【生周DVD】生日周边拍摄花絮",
     "date": "2026.7",
     "ratio": 1.5,
@@ -2653,7 +2657,7 @@ const MATERIALS = [
   },
   {
     "id": "m127",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "《突围II破局》EP06：我们把彼此留下来（上）",
     "date": "2026.8.1",
     "ratio": 1.5,
@@ -2671,7 +2675,7 @@ const MATERIALS = [
   },
   {
     "id": "m128",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "《突围II破局》EP06：我们把彼此留下来（下）",
     "date": "2026.8.2",
     "ratio": 1.5,
@@ -2689,7 +2693,7 @@ const MATERIALS = [
   },
   {
     "id": "m129",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "《突围II破局》EP06：加更",
     "date": "2026.8.5",
     "ratio": 1.5,
@@ -2707,7 +2711,7 @@ const MATERIALS = [
   },
   {
     "id": "m130",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "《突围II破局》EP07：破局（上）",
     "date": "2026.8.8",
     "ratio": 1.5,
@@ -2725,7 +2729,7 @@ const MATERIALS = [
   },
   {
     "id": "m131",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "《突围II破局》EP07：破局（下）",
     "date": "2026.8.9",
     "ratio": 1.5,
@@ -2743,7 +2747,7 @@ const MATERIALS = [
   },
   {
     "id": "m132",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "《突围II破局》EP07：加更",
     "date": "2026.8.12",
     "ratio": 1.5,
@@ -2761,7 +2765,7 @@ const MATERIALS = [
   },
   {
     "id": "m133",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "《突围II破局》EP08：任何方向都是前方（上）",
     "date": "2026.8.15",
     "ratio": 1.5,
@@ -2779,7 +2783,7 @@ const MATERIALS = [
   },
   {
     "id": "m134",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "《突围II破局》EP08：任何方向都是前方（下）",
     "date": "2026.8.15",
     "ratio": 1.5,
@@ -2797,7 +2801,7 @@ const MATERIALS = [
   },
   {
     "id": "m135",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "「第肆象限」演唱会Life’s radiant bloom概念短片",
     "date": "2026.8.17",
     "ratio": 1.5,
@@ -2815,7 +2819,7 @@ const MATERIALS = [
   },
   {
     "id": "m136",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "《突围II破局》EP08：加更",
     "date": "2026.8.19",
     "ratio": 1.5,
@@ -2833,7 +2837,7 @@ const MATERIALS = [
   },
   {
     "id": "m137",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "《TLOG》16：8月短视频花絮",
     "date": "2026.8.24",
     "ratio": 1.5,
@@ -2851,7 +2855,7 @@ const MATERIALS = [
   },
   {
     "id": "m138",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "【高会录像馆】「Unboxing My Heart」王烁然",
     "date": "2026.9.2",
     "ratio": 1.5,
@@ -2865,7 +2869,7 @@ const MATERIALS = [
   },
   {
     "id": "m139",
-    "cat": "TF家族_四代（早期）",
+    "cat": "TF四代（早期）",
     "title": "8月考核实录",
     "date": "2023.9.3",
     "ratio": 1.5,
@@ -2883,7 +2887,7 @@ const MATERIALS = [
   },
   {
     "id": "m140",
-    "cat": "TF家族_四代（早期）",
+    "cat": "TF四代（早期）",
     "title": "《星期五练习生》18：合宿特辑——是and不是end（上）",
     "date": "2023.9.10",
     "ratio": 1.5,
@@ -2902,7 +2906,7 @@ const MATERIALS = [
   },
   {
     "id": "m141",
-    "cat": "TF家族_四代（早期）",
+    "cat": "TF四代（早期）",
     "title": "《星期五练习生》23：间谍游戏",
     "date": "2023.10.14",
     "ratio": 1.5,
@@ -2923,7 +2927,7 @@ const MATERIALS = [
   },
   {
     "id": "m142",
-    "cat": "TF家族_四代（早期）",
+    "cat": "TF四代（早期）",
     "title": "日常训练记录 20",
     "date": "2024.1.28",
     "ratio": 1.5,
@@ -2942,7 +2946,7 @@ const MATERIALS = [
   },
   {
     "id": "m143",
-    "cat": "TF家族_四代（早期）",
+    "cat": "TF四代（早期）",
     "title": "2024新春音乐会《盛放》舞台篇DAY1（镜头极少）",
     "date": "2024.2.9",
     "ratio": 1.5,
@@ -2960,7 +2964,7 @@ const MATERIALS = [
   },
   {
     "id": "m144",
-    "cat": "TF家族_四代（早期）",
+    "cat": "TF四代（早期）",
     "title": "2024新春音乐会《盛放》舞台篇DAY2（镜头极少）",
     "date": "2024.2.10",
     "ratio": 1.5,
@@ -2978,7 +2982,7 @@ const MATERIALS = [
   },
   {
     "id": "m145",
-    "cat": "TF家族_四代（早期）",
+    "cat": "TF四代（早期）",
     "title": "《星期五练习生》34：新春茶话会（上）",
     "date": "2024.2.11",
     "ratio": 1.5,
@@ -2996,7 +3000,7 @@ const MATERIALS = [
   },
   {
     "id": "m146",
-    "cat": "TF家族_四代（早期）",
+    "cat": "TF四代（早期）",
     "title": "《星期五练习生》34：新春茶话会（下）",
     "date": "2024.2.12",
     "ratio": 1.5,
@@ -3014,7 +3018,7 @@ const MATERIALS = [
   },
   {
     "id": "m147",
-    "cat": "TF家族_四代（早期）",
+    "cat": "TF四代（早期）",
     "title": "「2024新春音乐会——盛放」练习室联排记录",
     "date": "2024.2.13",
     "ratio": 1.5,
@@ -3032,7 +3036,7 @@ const MATERIALS = [
   },
   {
     "id": "m148",
-    "cat": "TF家族_四代（早期）",
+    "cat": "TF四代（早期）",
     "title": "《星期五练习生》35番外：️是谁抢走了我的麦克风",
     "date": "2024.2.14",
     "ratio": 1.5,
@@ -3050,7 +3054,7 @@ const MATERIALS = [
   },
   {
     "id": "m149",
-    "cat": "TF家族_四代（早期）",
+    "cat": "TF四代（早期）",
     "title": "「2024新春音乐会——盛放」先导片",
     "date": "2024.2.24",
     "ratio": 1.5,
@@ -3068,7 +3072,7 @@ const MATERIALS = [
   },
   {
     "id": "m150",
-    "cat": "TF家族_四代（早期）",
+    "cat": "TF四代（早期）",
     "title": "「2024新春音乐会——盛放」制作篇（下）",
     "date": "2024.3.12",
     "ratio": 1.5,
@@ -3086,7 +3090,7 @@ const MATERIALS = [
   },
   {
     "id": "m151",
-    "cat": "TF家族_四代（早期）",
+    "cat": "TF四代（早期）",
     "title": "《星期五练习生》39:「嘻游记」今天晚上不睡觉",
     "date": "2024.3.29",
     "ratio": 1.5,
@@ -3119,7 +3123,7 @@ const MATERIALS = [
   },
   {
     "id": "m153",
-    "cat": "TF家族_四代（回归后）",
+    "cat": "TF四代（回归后）",
     "title": "心动是 就现在见面吧（镜头少）",
     "date": "2025.8.16",
     "ratio": 1.5,
@@ -4035,7 +4039,7 @@ const MATERIALS = [
   },
   {
     "id": "mibjbk7",
-    "cat": "TF家族_四代（早期）",
+    "cat": "TF四代（早期）",
     "title": "《星期五练习生》22：南国客栈诡事录（下）",
     "date": "2023.10.08",
     "ratio": null,
@@ -4054,7 +4058,7 @@ const MATERIALS = [
   },
   {
     "id": "mne90qr",
-    "cat": "TF家族_四代（早期）",
+    "cat": "TF四代（早期）",
     "title": "「2024新春音乐会——盛放」制作篇（中）",
     "date": "2024.3.7",
     "ratio": null,
@@ -4090,7 +4094,7 @@ const MATERIALS = [
   },
   {
     "id": "m21xzu9",
-    "cat": "TF家族_四代（早期）",
+    "cat": "TF四代（早期）",
     "title": "《WONDERLAND梦·始》演唱会VCR2",
     "date": "2025.8.2",
     "ratio": null,
@@ -4217,8 +4221,8 @@ const MATERIALS = [
   {
     "id": "maee2lp",
     "cat": "舞台官摄",
-    "title": "2026.5.2",
-    "date": "《FUN肆·P2K》见面会：《我们之间》纯享版（DAY2）",
+    "title": "《FUN肆·P2K》见面会：《我们之间》纯享版（DAY2）",
+    "date": "2026.5.2",
     "ratio": null,
     "guide": "https://www.bilibili.com/video/BV1chRLBSEX5?t=1.2",
     "art": {
@@ -4338,6 +4342,24 @@ const MATERIALS = [
         "assets/img/uploads/58bfbe34182f4996a7fcf5b96b24b535.jpg"
       ],
       "img": "assets/img/uploads/58bfbe34182f4996a7fcf5b96b24b535.jpg"
+    }
+  },
+  {
+    "id": "mdvgs9s",
+    "cat": "TF四代（回归后）",
+    "title": "《成长档案NO.0915-不熄灭的歌》张奕然生日纪录片（突围碎片＋文字＋视频祝福）",
+    "date": "2026.10.14",
+    "ratio": null,
+    "guide": "https://www.bilibili.com/video/BV1fnp269Ew9?t=0.8",
+    "art": {
+      "from": "",
+      "to": "",
+      "title": "",
+      "sub": "",
+      "imgs": [
+        "assets/img/uploads/8212b8250b2d41959d0d88b8c4e1c7c4.png"
+      ],
+      "img": "assets/img/uploads/8212b8250b2d41959d0d88b8c4e1c7c4.png"
     }
   }
 ];
@@ -5394,14 +5416,14 @@ const SECTORS = [
 ];
 const CATEGORIES = {
   "works": [
-    "未上线",
     "已上线",
+    "未上线",
     "其他"
   ],
   "materials": [
-    "TF家族_四代（早期）",
+    "TF四代（早期）",
     "TF_ING时期",
-    "TF家族_四代（回归后）",
+    "TF四代（回归后）",
     "舞台官摄",
     "短视频"
   ],
@@ -5411,4 +5433,4 @@ const CATEGORIES = {
     "单人礼盒"
   ]
 };
-const ABOUT_MD_FALLBACK = "123";
+const ABOUT_MD_FALLBACK = "爱让我们汇聚在这里♩\nCactus Kat on the track♪\nStars also on the track♫\n创作不息，星动不止\n\n☆✦✧★☆✦✧★☆✦✧★\n\n网页制作人：@无法锁定___♬\n特别鸣谢：@星垂野甸_Feiiii 提供的物料板块和音乐板块数据✦\n@CatchU_U 提供的周边板块素材与✧\n@梦女特长生 提供的生娃和娃卡素材☆\n@手抓饼致富计划 提出的修改建议与支持★\n@無人在意的當下 提出的修改建议与支持\n\n☆✦✧★☆✦✧★☆✦✧★\n\n\n";
