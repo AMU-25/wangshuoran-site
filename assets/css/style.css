@@ -620,6 +620,27 @@ ul { padding-left: 1.2em; }
   border-color: transparent; background: none; min-width: 26px; padding: 9px 6px;
 }
 .pager .pager-ellipsis:hover { transform: none; box-shadow: none; background: var(--panel-strong); }
+/* 分页：输入页码直接跳转 */
+.pager .pager-jump {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-family: var(--mono); font-size: 13px; letter-spacing: .04em; color: var(--text);
+  margin-left: 4px;
+}
+.pager .pager-input {
+  width: 52px; font-family: var(--mono); font-size: 13px; text-align: center;
+  padding: 7px 6px; border: var(--bw) solid var(--line-strong);
+  background: var(--panel); color: var(--text);
+}
+.pager .pager-input::-webkit-outer-spin-button,
+.pager .pager-input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+.pager .pager-input[type=number] { -moz-appearance: textfield; }
+.pager .pager-go {
+  font-family: var(--mono); font-size: 13px; letter-spacing: .04em;
+  padding: 7px 13px; cursor: pointer;
+  border: var(--bw) solid var(--line-strong); background: var(--panel); color: var(--text);
+  transition: .16s var(--ease);
+}
+.pager .pager-go:hover:not(:disabled) { transform: translate(-2px, -2px); box-shadow: var(--shadow-sm); }
 
 /* ---------- 进度条 ---------- */
 .progress { height: 12px; border-radius: 0; background: var(--panel-strong); overflow: hidden; border: var(--bw) solid var(--line-strong); }

@@ -532,6 +532,7 @@
         html += numBtn(total - 1);
       }
       html += '<button class="pager-next" type="button" aria-label="下一页"' + (page === total - 1 ? " disabled" : "") + ">下一页 ›</button>";
+      html += '<span class="pager-jump">跳至 <input class="pager-input" type="number" min="1" max="' + total + '" value="' + (page + 1) + '" aria-label="输入页码跳转"> / ' + total + ' 页<button class="pager-go" type="button">跳转</button></span>';
       pager.innerHTML = html;
     }
 
@@ -550,6 +551,12 @@
       else if (t.classList.contains("pager-next")) page = Math.min(totalPages() - 1, page + 1);
       else if (t.classList.contains("pager-num")) page = parseInt(t.getAttribute("data-p"), 10);
       else if (t.classList.contains("pager-ellipsis")) page = parseInt(t.getAttribute("data-p"), 10);
+      else if (t.classList.contains("pager-go")) {
+        var inp = pager.querySelector(".pager-input");
+        var v = parseInt(inp && inp.value, 10);
+        if (isNaN(v)) return;
+        page = Math.min(totalPages() - 1, Math.max(0, v - 1));
+      }
       else return;
       render(false);
       var root = document.documentElement;
@@ -557,6 +564,14 @@
       root.style.scrollBehavior = "auto"; // 还原时禁用平滑滚动，避免二次滑动
       window.scrollTo(prevX, prevY);
       root.style.scrollBehavior = sb;
+    });
+
+    pager.addEventListener("keydown", function (e) {
+      if (e.key === "Enter" && e.target.classList && e.target.classList.contains("pager-input")) {
+        e.preventDefault();
+        var go = pager.querySelector(".pager-go");
+        if (go) go.click();
+      }
     });
 
     global.addEventListener("resize", function () { render(false); });
