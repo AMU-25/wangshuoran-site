@@ -1739,9 +1739,9 @@ const MATERIALS = [
       "title": "待补充",
       "sub": "",
       "imgs": [
-        "assets/img/uploads/7976df5e93594ec0b88a8461d3ffa99c.jpg"
+        "assets/img/uploads/763aceda75f341a795d6cea795c494f0.png"
       ],
-      "img": "assets/img/uploads/7976df5e93594ec0b88a8461d3ffa99c.jpg"
+      "img": "assets/img/uploads/763aceda75f341a795d6cea795c494f0.png"
     }
   },
   {
@@ -2490,10 +2490,10 @@ const MATERIALS = [
       "title": "待补充",
       "sub": "",
       "imgs": [
-        "assets/img/uploads/4ab94c3ae5d14d05a58b7abbcc84c18a.png",
-        "assets/img/uploads/ce40eec4596241918ada9a6fd471e906.png"
+        "assets/img/uploads/43b0caa0f7e64b13a186793939625f8a.png",
+        "assets/img/uploads/e77f60e7078a4988a1955fd89bd674a2.png"
       ],
-      "img": "assets/img/uploads/4ab94c3ae5d14d05a58b7abbcc84c18a.png"
+      "img": "assets/img/uploads/43b0caa0f7e64b13a186793939625f8a.png"
     }
   },
   {
@@ -4356,9 +4356,9 @@ const MATERIALS = [
       "title": "",
       "sub": "",
       "imgs": [
-        "assets/img/uploads/8212b8250b2d41959d0d88b8c4e1c7c4.png"
+        "assets/img/uploads/788115495f86463bbb4b6e17eb51b23a.png"
       ],
-      "img": "assets/img/uploads/8212b8250b2d41959d0d88b8c4e1c7c4.png"
+      "img": "assets/img/uploads/788115495f86463bbb4b6e17eb51b23a.png"
     }
   }
 ];
