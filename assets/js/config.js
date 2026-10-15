@@ -55,14 +55,14 @@ const SITE_CONFIG = {
       "to": "",
       "title": "",
       "sub": "",
-      "img": "assets/img/uploads/e206deaaf9264de3b3015c481fb42b95.jpg"
+      "img": "assets/img/uploads/5ef4d15cbffc4ef28e73a5e3f8a1b056.jpeg"
     },
     "heroWallC": {
       "from": "",
       "to": "",
       "title": "",
       "sub": "",
-      "img": "assets/img/uploads/ca43816b3ca74326bc923dd939deef07.jpg"
+      "img": "assets/img/uploads/999c842d41c74d54843f76a851b3edaa.jpeg"
     }
   },
   "pages": {

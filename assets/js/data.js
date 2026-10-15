@@ -129,7 +129,7 @@ const STAR = {
     "to": "#15110f",
     "title": "王烁然",
     "sub": "SHUORAN WANG",
-    "img": "assets/img/uploads/ffab93ddbeb2403e852c75b4e3ff3d2b.jpg"
+    "img": "assets/img/uploads/f20b04710f7b48b4bbacc630d2c2197e.jpeg"
   }
 };
 const TIMELINE = [
@@ -1739,9 +1739,9 @@ const MATERIALS = [
       "title": "待补充",
       "sub": "",
       "imgs": [
-        "assets/img/uploads/763aceda75f341a795d6cea795c494f0.jpg"
+        "assets/img/uploads/3b593510097f4c1b8959dca8fecb46f5.jpg"
       ],
-      "img": "assets/img/uploads/763aceda75f341a795d6cea795c494f0.jpg"
+      "img": "assets/img/uploads/3b593510097f4c1b8959dca8fecb46f5.jpg"
     }
   },
   {
@@ -2490,10 +2490,10 @@ const MATERIALS = [
       "title": "待补充",
       "sub": "",
       "imgs": [
-        "assets/img/uploads/43b0caa0f7e64b13a186793939625f8a.jpg",
-        "assets/img/uploads/e77f60e7078a4988a1955fd89bd674a2.jpg"
+        "assets/img/uploads/7e56d03d7b634317b298e0aa97555ba4.jpg",
+        "assets/img/uploads/89d3ab36fecf4fc3aae23141f8eb141d.jpg"
       ],
-      "img": "assets/img/uploads/43b0caa0f7e64b13a186793939625f8a.jpg"
+      "img": "assets/img/uploads/7e56d03d7b634317b298e0aa97555ba4.jpg"
     }
   },
   {
@@ -3623,9 +3623,9 @@ const MATERIALS = [
       "title": "待补充",
       "sub": "",
       "imgs": [
-        "assets/img/uploads/f15af1ded2854631a11249e9932557c5.jpg"
+        "assets/img/uploads/449b00f0557143f990fa7f57fcfc9cc8.jpg"
       ],
-      "img": "assets/img/uploads/f15af1ded2854631a11249e9932557c5.jpg"
+      "img": "assets/img/uploads/449b00f0557143f990fa7f57fcfc9cc8.jpg"
     }
   },
   {
@@ -3641,9 +3641,9 @@ const MATERIALS = [
       "title": "待补充",
       "sub": "",
       "imgs": [
-        "assets/img/uploads/d74062146e4c4e818be8cf3cdcbb2519.jpg"
+        "assets/img/uploads/7d0b423ea19f4f409465f7b44d56e8c3.jpg"
       ],
-      "img": "assets/img/uploads/d74062146e4c4e818be8cf3cdcbb2519.jpg"
+      "img": "assets/img/uploads/7d0b423ea19f4f409465f7b44d56e8c3.jpg"
     }
   },
   {
@@ -3659,9 +3659,9 @@ const MATERIALS = [
       "title": "待补充",
       "sub": "",
       "imgs": [
-        "assets/img/uploads/a7baa5b154ab4655bc1512d30806bb92.jpg"
+        "assets/img/uploads/9e19d852feed4f8889921933e404d803.jpg"
       ],
-      "img": "assets/img/uploads/a7baa5b154ab4655bc1512d30806bb92.jpg"
+      "img": "assets/img/uploads/9e19d852feed4f8889921933e404d803.jpg"
     }
   },
   {
@@ -3677,9 +3677,9 @@ const MATERIALS = [
       "title": "待补充",
       "sub": "",
       "imgs": [
-        "assets/img/uploads/e505b53c33ac415fb1703c3657694853.jpg"
+        "assets/img/uploads/45b42df5aff44853ae5eccf27011b412.jpg"
       ],
-      "img": "assets/img/uploads/e505b53c33ac415fb1703c3657694853.jpg"
+      "img": "assets/img/uploads/45b42df5aff44853ae5eccf27011b412.jpg"
     }
   },
   {
@@ -3695,9 +3695,9 @@ const MATERIALS = [
       "title": "待补充",
       "sub": "",
       "imgs": [
-        "assets/img/uploads/86459196c3694f57a122941d9edbe1ed.jpg"
+        "assets/img/uploads/beafc3caff2e4a5393cac367111b4ede.jpg"
       ],
-      "img": "assets/img/uploads/86459196c3694f57a122941d9edbe1ed.jpg"
+      "img": "assets/img/uploads/beafc3caff2e4a5393cac367111b4ede.jpg"
     }
   },
   {
@@ -3713,9 +3713,9 @@ const MATERIALS = [
       "title": "待补充",
       "sub": "",
       "imgs": [
-        "assets/img/uploads/f31b5aadb9d04422b6a9c5aff6d106cf.jpg"
+        "assets/img/uploads/b9b019b2e9e1478184254fcbd495f123.jpg"
       ],
-      "img": "assets/img/uploads/f31b5aadb9d04422b6a9c5aff6d106cf.jpg"
+      "img": "assets/img/uploads/b9b019b2e9e1478184254fcbd495f123.jpg"
     }
   },
   {
@@ -4356,9 +4356,9 @@ const MATERIALS = [
       "title": "",
       "sub": "",
       "imgs": [
-        "assets/img/uploads/788115495f86463bbb4b6e17eb51b23a.jpg"
+        "assets/img/uploads/40029649c8be43c0aed27bafee4ec14d.jpg"
       ],
-      "img": "assets/img/uploads/788115495f86463bbb4b6e17eb51b23a.jpg"
+      "img": "assets/img/uploads/40029649c8be43c0aed27bafee4ec14d.jpg"
     }
   }
 ];
