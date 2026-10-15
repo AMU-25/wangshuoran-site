@@ -458,7 +458,7 @@ const MATERIALS = [
   {
     "id": "m2",
     "cat": "TF_ING时期",
-    "title": "2025新年音乐会[热爱]舞台篇DAY1",
+    "title": "2025新年音乐会[热爱]舞台篇DAY1（有串场内容）",
     "date": "2025.1.30",
     "ratio": 1.5,
     "guide": "https://www.bilibili.com/video/BV1Q5FMevEvg?t=1.1",
@@ -476,7 +476,7 @@ const MATERIALS = [
   {
     "id": "m3",
     "cat": "TF_ING时期",
-    "title": "2025新年音乐会[热爱]舞台篇DAY2",
+    "title": "2025新年音乐会[热爱]舞台篇DAY2（有串场内容）",
     "date": "2025.1.31",
     "ratio": 1.5,
     "guide": "https://www.bilibili.com/video/BV1mWFMebEny?t=1.7",
@@ -1368,7 +1368,7 @@ const MATERIALS = [
   {
     "id": "m56",
     "cat": "TF四代（回归后）",
-    "title": "2026新年音乐会《荣耀》舞台篇DAY1",
+    "title": "2026新年音乐会《荣耀》舞台篇DAY1（有串场内容）",
     "date": "2026.1.9",
     "ratio": 1.5,
     "guide": "https://www.bilibili.com/video/BV1HLrwBLECL?t=1.5",
@@ -1404,7 +1404,7 @@ const MATERIALS = [
   {
     "id": "m58",
     "cat": "TF四代（回归后）",
-    "title": "2026新年音乐会《荣耀》舞台篇DAY2",
+    "title": "2026新年音乐会《荣耀》舞台篇DAY2（有串场内容）",
     "date": "2026.1.16",
     "ratio": 1.5,
     "guide": "https://www.bilibili.com/video/BV1ChkTBYES1?t=1.4",
@@ -1422,7 +1422,7 @@ const MATERIALS = [
   {
     "id": "m59",
     "cat": "TF四代（回归后）",
-    "title": "2026新年音乐会《荣耀》舞台篇DAY3",
+    "title": "2026新年音乐会《荣耀》舞台篇DAY3（有串场内容）",
     "date": "2026.1.23",
     "ratio": 1.5,
     "guide": "https://www.bilibili.com/video/BV1VZzwBfEFg?t=1.1",
@@ -1930,7 +1930,7 @@ const MATERIALS = [
   {
     "id": "m87",
     "cat": "TF四代（回归后）",
-    "title": "《FUN肆·P2K》见面会舞台篇DAY1",
+    "title": "《FUN肆·P2K》见面会舞台篇DAY1（有串场内容）",
     "date": "2026.5.1",
     "ratio": 1.5,
     "guide": "https://www.bilibili.com/video/BV1CoRuBqE3g?t=13.5",
@@ -1948,7 +1948,7 @@ const MATERIALS = [
   {
     "id": "m88",
     "cat": "TF四代（回归后）",
-    "title": "《FUN肆·P2K》见面会舞台篇DAY2",
+    "title": "《FUN肆·P2K》见面会舞台篇DAY2（有串场内容）",
     "date": "2026.5.2",
     "ratio": 1.5,
     "guide": "https://www.bilibili.com/video/BV1JLRjBUEsp?t=1.4",
@@ -2941,42 +2941,6 @@ const MATERIALS = [
         "assets/img/uploads/2ba8c36b755747139e94f450e59f0605.jpg"
       ],
       "img": "assets/img/uploads/9dba7c51334b42ecb00c5fef37e8a1b4.jpg"
-    }
-  },
-  {
-    "id": "m143",
-    "cat": "TF四代（早期）",
-    "title": "2024新春音乐会《盛放》舞台篇DAY1（镜头极少）",
-    "date": "2024.2.9",
-    "ratio": 1.5,
-    "guide": "https://www.bilibili.com/video/BV1Nv42127Uv?t=83.5",
-    "art": {
-      "from": "#c4402f",
-      "to": "#a42423",
-      "title": "待补充",
-      "sub": "",
-      "imgs": [
-        "assets/img/uploads/83e66554eb724570a655ddf82d6deee5.jpg"
-      ],
-      "img": "assets/img/uploads/83e66554eb724570a655ddf82d6deee5.jpg"
-    }
-  },
-  {
-    "id": "m144",
-    "cat": "TF四代（早期）",
-    "title": "2024新春音乐会《盛放》舞台篇DAY2（镜头极少）",
-    "date": "2024.2.10",
-    "ratio": 1.5,
-    "guide": "https://www.bilibili.com/video/BV1wt421a7yM?t=1.1",
-    "art": {
-      "from": "#15110f",
-      "to": "#c4402f",
-      "title": "待补充",
-      "sub": "",
-      "imgs": [
-        "assets/img/uploads/6e60f6df3d964d98817f8f62c07f5cbd.jpg"
-      ],
-      "img": "assets/img/uploads/6e60f6df3d964d98817f8f62c07f5cbd.jpg"
     }
   },
   {

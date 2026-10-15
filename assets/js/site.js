@@ -574,7 +574,15 @@
       }
     });
 
-    global.addEventListener("resize", function () { render(false); });
+    var lastPerPage = perPage();
+    global.addEventListener("resize", function () {
+      // 仅当每页数量（列数）真正变化时才重排；
+      // 移动端弹出/收起软键盘会触发 resize，若直接重渲染会销毁正在输入的页码框、导致键盘闪退
+      var pp = perPage();
+      if (pp === lastPerPage) return;
+      lastPerPage = pp;
+      render(false);
+    });
 
     return {
       refresh: function () { page = 0; render(); },
