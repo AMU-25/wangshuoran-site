@@ -46,11 +46,12 @@
 
 <div class="footer"><div id="app-footer"></div></div>
 
-<script src="assets/js/data.js"></script>
-<script src="assets/js/config.js"></script>
-<script src="assets/js/icons.js"></script>
-<script src="assets/js/site.js"></script>
+<script src="assets/js/data.js" defer></script>
+<script src="assets/js/config.js" defer></script>
+<script src="assets/js/icons.js" defer></script>
+<script src="assets/js/site.js" defer></script>
 <script>
+  document.addEventListener('DOMContentLoaded', function () {
   Site.init('materials');
 
   var listAll = [];
@@ -107,7 +108,8 @@
       '</div>';
     Site.galleryModal({ imgs: imgs, alt: m.title, info: info, modalClass: 'mat-detail' });
   }
+  });
 </script>
-<script src="assets/js/cursor.js"></script>
+<script src="assets/js/cursor.js" defer></script>
 </body>
 </html>
