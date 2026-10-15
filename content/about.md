@@ -1,3 +1,7 @@
+该网站仅作为粉丝自发非商用目的安利使用，后续有新内容会持续更新
+
+☆✦✧★☆✦✧★☆✦✧★
+
 爱让我们汇聚在这里♩
 Cactus Kat on the track♪
 Stars also on the track♫

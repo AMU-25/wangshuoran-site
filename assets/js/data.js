@@ -5432,4 +5432,4 @@ const CATEGORIES = {
     "单人礼盒"
   ]
 };
-const ABOUT_MD_FALLBACK = "爱让我们汇聚在这里♩\nCactus Kat on the track♪\nStars also on the track♫\n创作不息，星动不止\n\n☆✦✧★☆✦✧★☆✦✧★\n\n网页制作人：@无法锁定___♬\n特别鸣谢：@星垂野甸_Feiiii 提供的物料板块和音乐板块数据✦\n@moon(小红书) 提供的周边板块素材与✧\n@梦女特长生 提供的生娃和娃卡素材☆\n@手抓饼致富计划 提出的修改建议与支持★\n@無人在意的當下 提出的修改建议与支持\n\n☆✦✧★☆✦✧★☆✦✧★\n\n\n";
+const ABOUT_MD_FALLBACK = "该网站仅作为粉丝自发非商用目的安利使用，后续有新内容会持续更新\n\n☆✦✧★☆✦✧★☆✦✧★\n\n爱让我们汇聚在这里♩\nCactus Kat on the track♪\nStars also on the track♫\n创作不息，星动不止\n\n☆✦✧★☆✦✧★☆✦✧★\n\n网页制作人：@无法锁定___♬\n特别鸣谢：@星垂野甸_Feiiii 提供的物料板块和音乐板块数据✦\n@moon(小红书) 提供的周边板块素材与✧\n@梦女特长生 提供的生娃和娃卡素材☆\n@手抓饼致富计划 提出的修改建议与支持★\n@無人在意的當下 提出的修改建议与支持\n\n☆✦✧★☆✦✧★☆✦✧★\n\n\n";
