@@ -421,6 +421,17 @@
   }
 
   /* ---------- 板块目录（首页与各页底部共用） ---------- */
+  // 跳转栏数量跟随板块内真实数据动态计算，避免写死数字与板块实际数量脱节
+  function sectorCountText(s) {
+    var map = {
+      works:     { src: (typeof WORKS !== "undefined" ? WORKS : []),         unit: "部作品" },
+      materials: { src: (typeof MATERIALS !== "undefined" ? MATERIALS : []), unit: "份物料" },
+      merch:     { src: (typeof MERCH !== "undefined" ? MERCH : []),         unit: "件周边" }
+    };
+    var m = map[s.key];
+    if (!m) return s.count; // 无明确"收录数量"的板块（如明星介绍）保留原标签
+    return m.src.length + " " + m.unit;
+  }
   function renderSectors(target, active) {
     var el = typeof target === "string" ? document.getElementById(target) : target;
     if (!el || typeof SECTORS === "undefined") return;
@@ -441,7 +452,7 @@
         '<span class="stamp" style="position:absolute;right:16px;top:16px"><span>NO.<br>' +
         s.n + "</span></span>" +
         '<i class="wm-box eq-line">' + bars + '</i>' +
-        '<p class="kicker">' + s.count + "</p>" +
+        '<p class="kicker">' + sectorCountText(s) + "</p>" +
         "<h3>" + s.title + "</h3>" +
         '<p class="desc">' + s.desc + "</p>" +
         '<span class="go">进入板块<i class="go-arrow">' + Icon.arrow + "</i></span></a>";
