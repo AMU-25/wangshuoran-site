@@ -4332,7 +4332,7 @@ const MATERIALS = [
   {
     "id": "marl0x2",
     "cat": "TF四代（早期）",
-    "title": "《成长档案NO.1018-回归爱与自我的原点》张函瑞生日纪录片",
+    "title": "《成长档案NO.1018-回归爱与自我的原点》张函瑞生日纪录片（视频祝福＋文字香水卡）",
     "date": "2026.11.7",
     "ratio": null,
     "guide": "https://www.bilibili.com/video/BV1mP4E6iEzQ?t=2364.1",
