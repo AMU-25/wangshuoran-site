@@ -620,6 +620,11 @@ ul { padding-left: 1.2em; }
   border-color: transparent; background: none; min-width: 26px; padding: 9px 6px;
 }
 .pager .pager-ellipsis:hover { transform: none; box-shadow: none; background: var(--panel-strong); }
+/* 周边「清单」视图：小缩略图图鉴模式（隐藏文字内容） */
+#list-grid { display: grid; gap: 10px; grid-template-columns: repeat(auto-fill, minmax(92px, 1fr)); }
+#list-grid .card { margin: 0; }
+#list-grid .thumb { aspect-ratio: 1 / 1; }
+#list-grid .card-body { display: none; }
 /* 分页：输入页码直接跳转 */
 .pager .pager-jump {
   display: inline-flex; align-items: center; gap: 6px;

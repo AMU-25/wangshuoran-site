@@ -143,7 +143,11 @@
 
   Site.renderSectors('sectors', 'index');
 
-  document.getElementById('news').innerHTML = NEWS.map(function (n) {
+  // 最新动态按时间自动排序（最新在前）：复用 site.js 的 timeVal 解析日期
+  var newsSorted = NEWS.slice().sort(function (a, b) {
+    return (Site.timeVal(b.date) || 0) - (Site.timeVal(a.date) || 0);
+  });
+  document.getElementById('news').innerHTML = newsSorted.map(function (n) {
     return '<div class="tl-item"><span class="tl-year">' + n.date + '</span><p>' + Site.esc(n.text) + '</p></div>';
   }).join('');
 

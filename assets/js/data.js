@@ -134,28 +134,20 @@ const STAR = {
 };
 const TIMELINE = [
   {
-    "year": "2016",
-    "text": "6岁开始学习钢琴，展露出对旋律的敏感，并开始尝试即兴创作。"
+    "year": "2026.8.13/14/16/17",
+    "text": "参演TF家族四代五公《第肆象限》"
   },
   {
-    "year": "2019",
-    "text": "独立完成词曲创作，发行个人原创作品《哪一颗星星属于我》。"
+    "year": "2025.8",
+    "text": "回到四代，以TF家族四代练习生的身份继续活动"
   },
   {
-    "year": "2021.06",
-    "text": "原创歌曲《哪一颗星星属于我》被人民日报客户端采用，制作成MV并于6月1日发布。"
+    "year": "2025.1",
+    "text": "加入TF_ING厂牌，成为厂牌唱作练习生"
   },
   {
-    "year": "2021.08",
-    "text": "钢琴翻奏作品《瓦妮莎的微笑》在音乐平台上线。"
-  },
-  {
-    "year": "2021",
-    "text": "参演共青团中央与 bilibili 联合推出的青少年励志纪录片《小小少年》，该片荣获上海电视节白玉兰奖。"
-  },
-  {
-    "year": "2021",
-    "text": "受邀参加共青团中央主办的“阳光自强公益音乐会”，与钢琴家郎朗同框演奏。"
+    "year": "2023.9.3",
+    "text": "公开为TF家族四代练习生"
   },
   {
     "year": "2023.07",
@@ -170,16 +162,28 @@ const TIMELINE = [
     "text": "受邀录制中央电视台少儿频道《中国少年说》，登上央视舞台演唱多首原创歌曲。"
   },
   {
-    "year": "2023.9.3",
-    "text": "公开为TF家族四代练习生"
+    "year": "2021.08",
+    "text": "钢琴翻奏作品《瓦妮莎的微笑》在音乐平台上线。"
   },
   {
-    "year": "2025.1",
-    "text": "加入TF_ING厂牌，成为厂牌唱作练习生"
+    "year": "2021.06",
+    "text": "原创歌曲《哪一颗星星属于我》被人民日报客户端采用，制作成MV并于6月1日发布。"
   },
   {
-    "year": "2025.8",
-    "text": "回到四代，以TF家族四代练习生的身份继续活动"
+    "year": "2021",
+    "text": "参演共青团中央与 bilibili 联合推出的青少年励志纪录片《小小少年》，该片荣获上海电视节白玉兰奖。"
+  },
+  {
+    "year": "2021",
+    "text": "受邀参加共青团中央主办的“阳光自强公益音乐会”，与钢琴家郎朗同框演奏。"
+  },
+  {
+    "year": "2019",
+    "text": "独立完成词曲创作，发行个人原创作品《哪一颗星星属于我》。"
+  },
+  {
+    "year": "2016",
+    "text": "6岁开始学习钢琴，展露出对旋律的敏感，并开始尝试即兴创作。"
   }
 ];
 const WORKS = [
@@ -4324,6 +4328,25 @@ const MATERIALS = [
       ],
       "img": "assets/img/uploads/40029649c8be43c0aed27bafee4ec14d.jpg"
     }
+  },
+  {
+    "id": "marl0x2",
+    "cat": "TF四代（早期）",
+    "title": "《成长档案NO.1018-回归爱与自我的原点》张函瑞生日纪录片",
+    "date": "2026.11.7",
+    "ratio": null,
+    "guide": "https://www.bilibili.com/video/BV1mP4E6iEzQ?t=2364.1",
+    "art": {
+      "from": "",
+      "to": "",
+      "title": "",
+      "sub": "",
+      "imgs": [
+        "assets/img/uploads/d5900cb1e2314f4fa0e07fc454b9fb36.jpg",
+        "assets/img/uploads/4f83aad8e57d4939bcc53ee2ead5443c.jpg"
+      ],
+      "img": "assets/img/uploads/d5900cb1e2314f4fa0e07fc454b9fb36.jpg"
+    }
   }
 ];
 const MERCH = [
@@ -5272,7 +5295,7 @@ const MERCH = [
     "series": "棉花娃娃",
     "name": "2026王烁然生日周边棉花娃娃“暖阳”",
     "date": "2026.3.15",
-    "price": "168",
+    "price": "168r",
     "status": "已收录",
     "note": "",
     "art": {
@@ -5293,7 +5316,7 @@ const MERCH = [
     "series": "单人礼盒",
     "name": "王烁然16岁生日纪念套装《不息》",
     "date": "2026.3.15",
-    "price": "169",
+    "price": "169r",
     "status": "已收录",
     "note": "",
     "art": {
@@ -5312,8 +5335,8 @@ const MERCH = [
     "id": "gdjmrl7",
     "series": "单人礼盒",
     "name": "《奔跑 Love Love Love》王烁然单人款",
-    "date": "",
-    "price": "79",
+    "date": "2026.2.19",
+    "price": "79r",
     "status": "已收录",
     "note": "",
     "art": {
@@ -5327,6 +5350,146 @@ const MERCH = [
       ],
       "img": "assets/img/uploads/02a8aa60498a454886acb77fbe862550.jpg"
     }
+  },
+  {
+    "id": "gv0s5ul",
+    "series": "单人礼盒",
+    "name": "TF家族四代练习生2027年台历套装《Beep BEEP!》单人款",
+    "date": "2026.11.7",
+    "price": "79r",
+    "status": "已收录",
+    "note": "",
+    "art": {
+      "from": "",
+      "to": "",
+      "title": "",
+      "sub": "",
+      "imgs": [
+        "assets/img/uploads/9bd3290ebacf47cdbb38c08e130093df.jpeg",
+        "assets/img/uploads/601e4f63f957482bb495077626c5f177.jpeg"
+      ],
+      "img": "assets/img/uploads/9bd3290ebacf47cdbb38c08e130093df.jpeg"
+    }
+  },
+  {
+    "id": "g0pmodv",
+    "series": "小卡",
+    "name": "2027台历《Beep Beep!》小卡1",
+    "date": "",
+    "price": "",
+    "status": "待补",
+    "note": "",
+    "art": {
+      "from": "",
+      "to": "",
+      "title": "",
+      "sub": ""
+    }
+  },
+  {
+    "id": "gwrs55p",
+    "series": "小卡",
+    "name": "2027台历《Beep Beep!》小卡2",
+    "date": "",
+    "price": "",
+    "status": "待补",
+    "note": "",
+    "art": {
+      "from": "",
+      "to": "",
+      "title": "",
+      "sub": ""
+    }
+  },
+  {
+    "id": "gempj0b",
+    "series": "小卡",
+    "name": "2027台历《Beep Beep!》小卡3",
+    "date": "",
+    "price": "",
+    "status": "待补",
+    "note": "",
+    "art": {
+      "from": "",
+      "to": "",
+      "title": "",
+      "sub": ""
+    }
+  },
+  {
+    "id": "guv4gmr",
+    "series": "小卡",
+    "name": "2027台历《Beep Beep!》小卡4",
+    "date": "",
+    "price": "",
+    "status": "待补",
+    "note": "",
+    "art": {
+      "from": "",
+      "to": "",
+      "title": "",
+      "sub": ""
+    }
+  },
+  {
+    "id": "g5qx0dl",
+    "series": "小卡",
+    "name": "2027台历《Beep Beep!》拍立得1",
+    "date": "",
+    "price": "",
+    "status": "待补",
+    "note": "",
+    "art": {
+      "from": "",
+      "to": "",
+      "title": "",
+      "sub": ""
+    }
+  },
+  {
+    "id": "g8u9jks",
+    "series": "小卡",
+    "name": "2027台历《Beep Beep!》拍立得2",
+    "date": "",
+    "price": "",
+    "status": "待补",
+    "note": "",
+    "art": {
+      "from": "",
+      "to": "",
+      "title": "",
+      "sub": ""
+    }
+  },
+  {
+    "id": "g7joyda",
+    "series": "小卡",
+    "name": "2027台历《Beep Beep!》拍立得3",
+    "date": "",
+    "price": "",
+    "status": "待补",
+    "note": "",
+    "art": {
+      "from": "",
+      "to": "",
+      "title": "",
+      "sub": ""
+    }
+  },
+  {
+    "id": "g08y4ac",
+    "series": "小卡",
+    "name": "2027台历《Beep Beep!》拍立得（隐藏）",
+    "date": "",
+    "price": "",
+    "status": "待补",
+    "note": "",
+    "art": {
+      "from": "",
+      "to": "",
+      "title": "",
+      "sub": ""
+    }
   }
 ];
 const NEWS = [
@@ -5337,6 +5500,10 @@ const NEWS = [
   {
     "date": "2026.4",
     "text": "参加TF家族四代二班见面会--FUN肆.P2K,全链路制作二班团歌《YES SIR!》和与聂玮辰的合作曲《逆境Mystery tour》,制作开场VCR配乐，原创能力受到关注。"
+  },
+  {
+    "date": "2026.11.7",
+    "text": "TF家族四代练习生2027年台历套装《Beep BEEP!》单人款上线"
   }
 ];
 const SECTORS = [
