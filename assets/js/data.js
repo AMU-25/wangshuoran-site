@@ -4347,6 +4347,27 @@ const MATERIALS = [
       ],
       "img": "assets/img/uploads/d5900cb1e2314f4fa0e07fc454b9fb36.jpg"
     }
+  },
+  {
+    "id": "m8h66m0",
+    "cat": "TF四代（回归后）",
+    "title": "【TF家族练习生】《TLOG》17：11月日常训练实录",
+    "date": "2026.11.14",
+    "ratio": null,
+    "guide": "https://www.bilibili.com/video/BV1pQsV6GEhX?t=1.1",
+    "art": {
+      "from": "",
+      "to": "",
+      "title": "",
+      "sub": "",
+      "imgs": [
+        "assets/img/uploads/256b9c8aa1a2452a909193c8daff7c30.jpg",
+        "assets/img/uploads/cb7e863c9aaa436fa012755f1c745eb3.jpg",
+        "assets/img/uploads/4a4c3eb09fdd4a74a5ed878eebf2fa87.jpg",
+        "assets/img/uploads/cbd3b5749b554925b217bf765e3b7d71.jpg"
+      ],
+      "img": "assets/img/uploads/256b9c8aa1a2452a909193c8daff7c30.jpg"
+    }
   }
 ];
 const MERCH = [
