@@ -88,9 +88,10 @@
     }
     Site.setDetailNav({ list: worksAll, idx: idx, open: function (item) { detail(item.id); } });
     var src = Site.pic(w.art, 0.75);
+    var tsrc = Site.thumb(src);
     Site.openModal(
       '<div class="modal-body">' +
-        '<div class="media"><img src="' + src + '" alt="' + Site.esc(w.title) + '"></div>' +
+        '<div class="media"><img src="' + tsrc + '" data-full="' + src + '" alt="' + Site.esc(w.title) + '"></div>' +
         '<div class="info">' +
           '<span class="chip">' + w.cat + '</span>' +
           '<h3 style="margin:12px 0 4px">' + Site.esc(w.title) + '</h3>' +
@@ -106,6 +107,16 @@
         '</div>' +
       '</div>'
     );
+    // 原图后台预载后替换
+    if (src && src !== tsrc) {
+      var box = document.getElementById('site-modal-box');
+      var mainImg = box && box.querySelector('.media img');
+      var hi = new Image();
+      hi.onload = hi.onerror = function () {
+        if (mainImg && mainImg.parentNode && mainImg.getAttribute('data-full') === src) mainImg.src = src;
+      };
+      hi.src = src;
+    }
   }
 
   document.getElementById('list').addEventListener('click', function (e) {

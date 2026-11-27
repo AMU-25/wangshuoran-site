@@ -365,17 +365,34 @@
     var imgs = opts.imgs || [];
     var cur = 0;
     function render() {
+      var full = imgs[cur] || '';
+      var ts = thumb(full);
+      // 主图先显示轻量缩略图（秒开），原图后台加载完成后无缝替换为高清
       var main = imgs.length
-        ? '<img src="' + esc(imgs[cur]) + '" alt="' + esc(opts.alt || '') + '" style="width:100%;max-height:62vh;object-fit:contain;border-radius:10px;background:#000;display:block">'
+        ? '<img id="gm-main" src="' + esc(ts) + '" data-full="' + esc(full) + '" alt="' + esc(opts.alt || '') + '" style="width:100%;max-height:62vh;object-fit:contain;border-radius:10px;background:#000;display:block">'
         : '<div style="width:100%;height:240px;display:flex;align-items:center;justify-content:center;color:#888;background:#15120f;border-radius:10px">暂无图片</div>';
       var thumbs = imgs.length > 1 ? '<div style="display:flex;gap:8px;margin-top:10px;flex-wrap:wrap;justify-content:center">' + imgs.map(function (s, i) {
-        return '<button type="button" data-i="' + i + '" style="width:64px;height:64px;padding:0;border:' + (i === cur ? '3px solid #a42423' : '1px solid #555') + ';border-radius:8px;overflow:hidden;cursor:pointer;background:#000"><img src="' + esc(s) + '" style="width:100%;height:100%;object-fit:cover" loading="lazy"></button>';
+        var ts = thumb(s);
+        return '<button type="button" data-i="' + i + '" style="width:64px;height:64px;padding:0;border:' + (i === cur ? '3px solid #a42423' : '1px solid #555') + ';border-radius:8px;overflow:hidden;cursor:pointer;background:#000"><img src="' + esc(ts) + '" onerror="this.onerror=null;this.src=\'' + esc(s) + '\'" style="width:100%;height:100%;object-fit:cover" loading="lazy"></button>';
       }).join('') + '</div>' : '';
       openModal('<div style="display:flex;flex-direction:column;align-items:center;gap:6px">' + main + thumbs + (opts.info || '') + '</div>', opts.modalClass || '');
       var box = document.getElementById('site-modal-box');
       box.querySelectorAll('button[data-i]').forEach(function (b) {
         b.onclick = function () { cur = +b.getAttribute('data-i'); render(); };
       });
+      // 原图后台预载，加载完成后替换主图；若期间已切到别的图则放弃，避免错位
+      var mainImg = document.getElementById('gm-main');
+      if (mainImg && full && full !== ts) {
+        var want = full;
+        var hi = new Image();
+        hi.onload = function () {
+          if (mainImg.parentNode && mainImg.getAttribute('data-full') === want) mainImg.src = want;
+        };
+        hi.onerror = function () {
+          if (mainImg.parentNode && mainImg.getAttribute('data-full') === want) mainImg.src = want;
+        };
+        hi.src = full;
+      }
     }
     render();
   }
@@ -393,13 +410,24 @@
     if (g) {
       guideHtml = '<div class="lb-guide">指路：' + linkify(g) + "</div>";
     }
+    var ts = thumb(src);
     openModal(
-      "<img src='" + src + "' alt='" + esc(cap || "") + "'>" +
+      "<img src='" + ts + "' data-full='" + esc(src) + "' alt='" + esc(cap || "") + "'>" +
       (cap ? '<div class="cap">' + esc(cap) + "</div>" : "") +
       (showSource !== false ? '<div class="lb-source">图片来源：' + (source ? esc(source) : '<span class="lb-source-empty">未标注</span>') + "</div>" : "") +
       guideHtml,
       "lightbox"
     );
+    // 原图后台预载后替换，缩略图先秒开
+    if (src && src !== ts) {
+      var box = document.getElementById("site-modal-box");
+      var mainImg = box && box.querySelector("img");
+      var hi = new Image();
+      hi.onload = hi.onerror = function () {
+        if (mainImg && mainImg.parentNode && mainImg.getAttribute("data-full") === src) mainImg.src = src;
+      };
+      hi.src = src;
+    }
   }
 
   /* ---------- 入场动画（支持 JS 动态注入的内容） ---------- */
