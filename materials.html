@@ -70,6 +70,7 @@
     card: function (m) {
       var r = 1.5; // 缩略图统一横板 3:2
       var src = Site.pic(m.art, r);
+      var tsrc = Site.thumb(src);
       var pics = Site.pics(m.art || {});
       var gal = pics.length > 1
         ? '<span style="position:absolute;right:8px;top:8px;padding:3px 8px;font-size:12px;font-weight:700;' +
@@ -77,9 +78,9 @@
         : '';
       return '<figure class="item polaroid" style="cursor:zoom-in">' +
         '<div style="position:relative">' +
-        '<img src="' + src + '" alt="' + Site.esc(m.title) + '" style="aspect-ratio:' + r + '" ' +
+        '<img src="' + tsrc + '" alt="' + Site.esc(m.title) + '" style="aspect-ratio:' + r + '" ' +
         'data-src="' + src + '" data-cap="' + Site.esc(m.title + ' · ' + m.date) + '" ' +
-        'data-guide="' + Site.esc(m.guide || '') + '" loading="lazy" decoding="async">' + gal +
+        'data-guide="' + Site.esc(m.guide || '') + '" loading="lazy" decoding="async" onerror="this.onerror=null;this.src=\'' + src + '\'">' + gal +
         '</div>' +
         '<figcaption class="cap">' +
         '<span class="t">' + Site.esc(m.title) + '</span>' +
@@ -98,7 +99,10 @@
     openMaterialDetail(listAll[idx]);
   });
 
-  function openMaterialDetail(m) {
+  function openMaterialDetail(m, idx) {
+    if (typeof idx !== 'number') idx = listAll.indexOf(m);
+    if (idx < 0 || !listAll.length) idx = 0;
+    Site.setDetailNav({ list: listAll, idx: idx, open: function (item) { openMaterialDetail(item, listAll.indexOf(item)); } });
     var imgs = Site.pics(m.art || {});
     var guide = (m.guide || '').trim();
     var info = '<div style="margin-top:6px;text-align:center"><h3 style="margin:0 0 6px">' + Site.esc(m.title) + '</h3>' +

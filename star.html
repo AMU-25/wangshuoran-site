@@ -183,12 +183,19 @@
   }
   function gmItem(g) {
     var src = Site.pic(g, 0.75);
+    var tsrc = Site.thumb(src);
     var title = g.title || '';
     var source = g.source || '';
     return '<div class="gm-item" data-src="' + Site.esc(src) + '" data-cap="' + Site.esc(title) + '" data-source="' + Site.esc(source) + '">' +
-      '<img src="' + src + '" alt="' + Site.esc(title) + '">' +
+      '<img src="' + tsrc + '" alt="' + Site.esc(title) + '" onerror="this.onerror=null;this.src=\'' + src + '\'">' +
       (title ? '<div class="gm-cap">' + Site.esc(title) + '</div>' : '') +
       '</div>';
+  }
+  function openGLightbox(g, idx) {
+    if (typeof idx !== 'number' || idx < 0) idx = gl.indexOf(g);
+    if (idx < 0) idx = 0;
+    Site.setDetailNav({ list: gl, idx: idx, open: function (item) { openGLightbox(item); } });
+    Site.lightbox(Site.pic(g, 0.75), g.title || '', g.source || '');
   }
   var gl = galleryList();
   var gtrack = document.getElementById('gallery');
@@ -254,7 +261,16 @@
   document.addEventListener('click', function (e) {
     var item = e.target.closest('.gm-item');
     if (item) {
-      Site.lightbox(item.getAttribute('data-src'), item.getAttribute('data-cap'), item.getAttribute('data-source'));
+      if (gl.length) {
+        var s0 = item.getAttribute('data-src');
+        var gi = 0;
+        for (var k = 0; k < gl.length; k++) {
+          if (Site.pic(gl[k], 0.75) === s0) { gi = k; break; }
+        }
+        openGLightbox(gl[gi], gi);
+      } else {
+        Site.lightbox(item.getAttribute('data-src'), item.getAttribute('data-cap'), item.getAttribute('data-source'));
+      }
       return;
     }
     var img = e.target.closest('img[data-src]');

@@ -65,8 +65,9 @@
   function renderListGrid() {
     document.getElementById('list-grid').innerHTML = gridAll.map(function (m) {
       var src = Site.pic(m.art, 1);
+      var tsrc = Site.thumb(src);
       return '<article class="card" style="cursor:pointer;margin:0"><div class="thumb halftone" style="aspect-ratio:1/1">' +
-        '<img src="' + src + '" alt="' + Site.esc(m.name) + '" loading="lazy" decoding="async">' +
+        '<img src="' + tsrc + '" alt="' + Site.esc(m.name) + '" loading="lazy" decoding="async" onerror="this.onerror=null;this.src=\'' + src + '\'">' +
         '</div></article>';
     }).join('');
   }
@@ -83,11 +84,12 @@
     search: function (m) { return m.name + m.series + m.note; },
     card: function (m) {
       var src = Site.pic(m.art, 1);
+      var tsrc = Site.thumb(src);
       var on = m.status === '已收录';
       var pics = Site.pics(m.art || {});
       var gal = pics.length > 1 ? '<span class="badge" style="left:auto;right:10px;background:rgba(2,1,0,.78)">图 ' + pics.length + '</span>' : '';
       return '<article class="card reveal" style="cursor:pointer"><div class="thumb halftone" style="aspect-ratio:1/1">' +
-        '<img src="' + src + '" alt="' + Site.esc(m.name) + '" loading="lazy" decoding="async">' +
+        '<img src="' + tsrc + '" alt="' + Site.esc(m.name) + '" loading="lazy" decoding="async" onerror="this.onerror=null;this.src=\'' + src + '\'">' +
         '<span class="badge" style="' + (on ? 'background:rgba(164,36,35,.92)' : 'background:rgba(2,1,0,.78)') + '">' +
         m.status + '</span>' + gal + '</div>' +
         '<div class="card-body"><h3>' + Site.esc(m.name) + '</h3>' +
@@ -111,7 +113,10 @@
     openMerchDetail(gridAll[idx]);
   });
 
-  function openMerchDetail(m) {
+  function openMerchDetail(m, idx) {
+    if (typeof idx !== 'number') idx = gridAll.indexOf(m);
+    if (idx < 0 || !gridAll.length) idx = 0;
+    Site.setDetailNav({ list: gridAll, idx: idx, open: function (item) { openMerchDetail(item, gridAll.indexOf(item)); } });
     var imgs = Site.pics(m.art || {});
     var info = '<div style="margin-top:6px;text-align:center"><h3 style="margin:0 0 6px">' + Site.esc(m.name) + '</h3>' +
       '<p style="color:#caa;margin:0 0 8px">' + Site.esc(m.series || '') + ' · ' + Site.esc(m.date || '') + ' · ' + Site.esc(m.price || '') + '</p>' +

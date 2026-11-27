@@ -53,6 +53,7 @@
 <script>
   document.addEventListener('DOMContentLoaded', function () {
   Site.init('works');
+  var worksAll = WORKS.slice();
 
   Site.list({
     rootId: 'list',
@@ -65,10 +66,12 @@
     cats: (typeof CATEGORIES !== 'undefined' && CATEGORIES && CATEGORIES.works)
       ? CATEGORIES.works.slice() : ['音乐', '综艺', '舞台'],
     search: function (w) { return w.title + w.role + w.year + w.cat + w.desc; },
+    onRows: function (rows) { worksAll = rows; },
     card: function (w) {
       var src = Site.pic(w.art, 0.75);
+      var tsrc = Site.thumb(src);
       return '<article class="card reveal" data-id="' + w.id + '">' +
-        '<div class="thumb halftone" style="aspect-ratio:1/1"><img src="' + src + '" alt="' + Site.esc(w.title) + '" loading="lazy" decoding="async">' +
+        '<div class="thumb halftone" style="aspect-ratio:1/1"><img src="' + tsrc + '" alt="' + Site.esc(w.title) + '" loading="lazy" decoding="async" onerror="this.onerror=null;this.src=\'' + src + '\'">' +
         '<span class="badge">' + w.cat + ' · ' + w.year + '</span></div>' +
         '<div class="card-body"><h3>' + Site.esc(w.title) + '</h3>' +
         '<p class="meta">' + Site.esc(w.role) + '</p>' +
@@ -79,6 +82,11 @@
   function detail(id) {
     var w = WORKS.filter(function (x) { return x.id === id; })[0];
     if (!w) return;
+    var idx = 0;
+    for (var i = 0; i < worksAll.length; i++) {
+      if (worksAll[i] && worksAll[i].id === id) { idx = i; break; }
+    }
+    Site.setDetailNav({ list: worksAll, idx: idx, open: function (item) { detail(item.id); } });
     var src = Site.pic(w.art, 0.75);
     Site.openModal(
       '<div class="modal-body">' +

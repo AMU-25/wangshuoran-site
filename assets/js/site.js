@@ -296,15 +296,40 @@
         '<div class="modal-box" id="site-modal-box"></div>';
       document.body.appendChild(el);
       el.addEventListener("click", function (e) {
+        var navBtn = e.target.closest && e.target.closest("[data-detail-nav]");
+        if (navBtn && detailNav) {
+          detailNavStep(parseInt(navBtn.getAttribute("data-detail-nav"), 10));
+          return;
+        }
         if (e.target === el || e.target.closest("[data-close]")) closeModal();
       });
+      // 手机端在弹窗上左右滑动切换上一条/下一条
+      var tsX = null, tsY = null;
+      el.addEventListener("touchstart", function (e) {
+        if (e.touches.length === 1) { tsX = e.touches[0].clientX; tsY = e.touches[0].clientY; }
+      }, { passive: true });
+      el.addEventListener("touchend", function (e) {
+        if (tsX === null || tsY === null || !detailNav) return;
+        var t = e.changedTouches[0];
+        var dx = t.clientX - tsX, dy = t.clientY - tsY;
+        tsX = tsY = null;
+        if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.5) detailNavStep(dx < 0 ? 1 : -1);
+      }, { passive: true });
     }
     return el;
   }
+
+  // 键盘左右方向键切换详情（全局只注册一次）
+  global.addEventListener("keydown", function (e) {
+    var modal = document.getElementById("site-modal");
+    if (!modal || !modal.classList.contains("open") || !detailNav) return;
+    if (e.key === "ArrowLeft") { e.preventDefault(); detailNavStep(-1); }
+    else if (e.key === "ArrowRight") { e.preventDefault(); detailNavStep(1); }
+  });
   function openModal(html, cls) {
     var el = ensureModal();
     el.className = "modal open" + (cls ? " " + cls : "");
-    document.getElementById("site-modal-box").innerHTML = html;
+    document.getElementById("site-modal-box").innerHTML = html + detailNavHtml();
     document.body.style.overflow = "hidden";
   }
   function closeModal() {
@@ -313,6 +338,26 @@
       el.className = "modal";
       document.body.style.overflow = "";
     }
+    detailNav = null;
+  }
+
+  /* 详情弹窗内左右切换上一条/下一条：各页详情打开前用 setDetailNav 注入当前筛选列表 */
+  var detailNav = null; // { list, idx, open }
+  function setDetailNav(cfg) { detailNav = cfg; }
+  function detailNavHtml() {
+    if (!detailNav || !detailNav.list || detailNav.list.length < 2) return "";
+    var n = detailNav.list.length;
+    return '<div class="detail-nav">' +
+      '<button class="detail-nav-btn detail-nav-prev" type="button" data-detail-nav="-1" aria-label="上一条">‹</button>' +
+      '<span class="detail-nav-pos">' + (detailNav.idx + 1) + ' / ' + n + '</span>' +
+      '<button class="detail-nav-btn detail-nav-next" type="button" data-detail-nav="1" aria-label="下一条">›</button>' +
+      '</div>';
+  }
+  function detailNavStep(delta) {
+    if (!detailNav || !detailNav.list || detailNav.list.length < 2) return;
+    var n = detailNav.list.length;
+    detailNav.idx = (detailNav.idx + delta + n) % n;
+    if (typeof detailNav.open === "function") detailNav.open(detailNav.list[detailNav.idx]);
   }
 
   // 多图画廊弹窗：主图 + 缩略图切换 + 自定义信息区，供物料/周边详情等复用
@@ -621,6 +666,13 @@
     return [];
   }
 
+  // 列表小卡片用缩略图路径（assets/img/uploads/thumbs/ 下同名文件），大图/详情仍用原图
+  function thumb(src) {
+    if (typeof src !== 'string') return src;
+    if (src.indexOf('/uploads/') < 0 || src.indexOf('/thumbs/') >= 0) return src;
+    return src.replace('/uploads/', '/uploads/thumbs/');
+  }
+
   /* ---------- 卡纸图片框：把图片容器包裹为 .mat-frame ---------- */
   function matify(elt, tape, clip) {
     if (!elt || !elt.parentNode) return;
@@ -775,9 +827,11 @@
     art: art,
     pic: pic,
     pics: pics,
+    thumb: thumb,
     esc: esc,
     linkify: linkify,
     galleryModal: galleryModal,
+    setDetailNav: setDetailNav,
     openModal: openModal,
     closeModal: closeModal,
     lightbox: lightbox,

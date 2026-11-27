@@ -672,6 +672,27 @@ ul { padding-left: 1.2em; }
   animation: pop .28s var(--ease);
 }
 .modal-close { position: absolute; top: 22px; right: 26px; z-index: 5; }
+/* 详情内左右切换：浮在弹窗两侧，不挡内容点击 */
+.detail-nav { position: absolute; inset: 0; z-index: 6; pointer-events: none; display: flex; align-items: center; justify-content: space-between; padding: 0 10px; }
+.detail-nav-btn {
+  pointer-events: auto; width: 46px; height: 60px; padding: 0; cursor: pointer;
+  font-family: var(--mono); font-size: 34px; line-height: 1;
+  color: var(--text); background: rgba(20,17,14,.86);
+  border: var(--bw) solid var(--line-strong); border-radius: 8px;
+  transition: .16s var(--ease);
+}
+.detail-nav-btn:hover { transform: translateY(-2px); box-shadow: var(--shadow-sm); color: var(--brand); }
+.detail-nav-pos {
+  position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%);
+  font-family: var(--mono); font-size: 13px; color: #fff;
+  background: rgba(5,4,3,.82); padding: 4px 12px; border-radius: 20px;
+  white-space: nowrap;
+}
+@media (max-width: 640px) {
+  .detail-nav { padding: 0 6px; }
+  .detail-nav-btn { width: 36px; height: 48px; font-size: 26px; }
+  .detail-nav-pos { bottom: 18px; }
+}
 /* 用 minmax(0, …) 让两列严格按比例分配、不受内容 min-content 宽度挤压，保证图片框尺寸每条一致 */
 .modal-body { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1fr); }
 /* 图片框固定正方形：align-self:start 让它不被右侧文字栏高度拉伸，尺寸只由列宽决定，各条详情完全一致 */

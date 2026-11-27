@@ -123,8 +123,9 @@
   // 照片墙副照片：读后台配置（有 img 用真实照片，否则用占位画作）；无配置时回退默认文案
   var WALL_B = HOME.heroWallB || { title: 'LIVE · 舞台', sub: 'TOUR 2024', from: '#a42423', to: '#160404', motif: 'vinyl' };
   var WALL_C = HOME.heroWallC || { title: 'STUDIO · 创作', sub: 'DEMO 06', from: '#8f2b1f', to: '#020100', motif: 'wave' };
-  document.getElementById('wf-b').innerHTML = '<img alt="" src="' + Site.pic(WALL_B, 1.1) + '">';
-  document.getElementById('wf-c').innerHTML = '<img alt="" src="' + Site.pic(WALL_C, 0.92) + '">';
+  var wfB = Site.pic(WALL_B, 1.1), wfC = Site.pic(WALL_C, 0.92);
+  document.getElementById('wf-b').innerHTML = '<img alt="" src="' + Site.thumb(wfB) + '" onerror="this.onerror=null;this.src=\'' + wfB + '\'">';
+  document.getElementById('wf-c').innerHTML = '<img alt="" src="' + Site.thumb(wfC) + '" onerror="this.onerror=null;this.src=\'' + wfC + '\'">';
   document.getElementById('hero-stats').innerHTML = STAR.stats.map(function (s) {
     return '<div><b>' + s.n + '</b><span>' + Site.esc(s.l) + '</span></div>';
   }).join('');
