@@ -4351,7 +4351,7 @@ const MATERIALS = [
   {
     "id": "m8h66m0",
     "cat": "TF四代（回归后）",
-    "title": "【TF家族练习生】《TLOG》17：11月日常训练实录",
+    "title": "《TLOG》17：11月日常训练实录",
     "date": "2026.11.14",
     "ratio": null,
     "guide": "https://www.bilibili.com/video/BV1pQsV6GEhX?t=1.1",
@@ -4367,6 +4367,42 @@ const MATERIALS = [
         "assets/img/uploads/cbd3b5749b554925b217bf765e3b7d71.jpg"
       ],
       "img": "assets/img/uploads/256b9c8aa1a2452a909193c8daff7c30.jpg"
+    }
+  },
+  {
+    "id": "mrlav48",
+    "cat": "TF四代（回归后）",
+    "title": "《第肆象限》演唱会纪录片EP01「向上」",
+    "date": "2026.11.24",
+    "ratio": null,
+    "guide": "https://www.bilibili.com/video/BV19UySzZEc8?t=4.1",
+    "art": {
+      "from": "",
+      "to": "",
+      "title": "",
+      "sub": "",
+      "imgs": [
+        "assets/img/uploads/8ada427c0b4c45a494af1139ce62d3db.jpg"
+      ],
+      "img": "assets/img/uploads/8ada427c0b4c45a494af1139ce62d3db.jpg"
+    }
+  },
+  {
+    "id": "mclvbt6",
+    "cat": "TF四代（回归后）",
+    "title": "《第肆象限》演唱会纪录片EP02「冲劲」",
+    "date": "2026.11.26",
+    "ratio": null,
+    "guide": "https://www.bilibili.com/video/BV1u9ymzmExE?t=17.7",
+    "art": {
+      "from": "",
+      "to": "",
+      "title": "",
+      "sub": "",
+      "imgs": [
+        "assets/img/uploads/ec333fe253d34aedbfec1a6f81d453d3.jpg"
+      ],
+      "img": "assets/img/uploads/ec333fe253d34aedbfec1a6f81d453d3.jpg"
     }
   }
 ];
