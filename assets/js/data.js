@@ -456,6 +456,25 @@ const WORKS = [
       "sub": "",
       "img": "assets/img/uploads/3e3ccd6f3d344265b2425352c14e33fd.jpg"
     }
+  },
+  {
+    "id": "w2zbd0z",
+    "cat": "未上线",
+    "title": "serendipity",
+    "year": "2026.11.28",
+    "role": "微博【听烁了吗】#11",
+    "desc": "",
+    "guide": "https://weibo.com/7981332708/Rtv71fxRX",
+    "art": {
+      "from": "",
+      "to": "",
+      "title": "",
+      "sub": "",
+      "imgs": [
+        "assets/img/uploads/fafee6cdddb7450d82530d324842754a.jpg"
+      ],
+      "img": "assets/img/uploads/fafee6cdddb7450d82530d324842754a.jpg"
+    }
   }
 ];
 const MATERIALS = [
@@ -4403,6 +4422,24 @@ const MATERIALS = [
         "assets/img/uploads/ec333fe253d34aedbfec1a6f81d453d3.jpg"
       ],
       "img": "assets/img/uploads/ec333fe253d34aedbfec1a6f81d453d3.jpg"
+    }
+  },
+  {
+    "id": "mvgjsvp",
+    "cat": "TF四代（回归后）",
+    "title": "《第肆象限》演唱会纪录片EP03「合力」",
+    "date": "2026.11.28",
+    "ratio": null,
+    "guide": "https://www.bilibili.com/video/BV1Mt1NzbE5x?t=47.6",
+    "art": {
+      "from": "",
+      "to": "",
+      "title": "",
+      "sub": "",
+      "imgs": [
+        "assets/img/uploads/a04ba79c47d243d38260ef4ba666cfb8.jpg"
+      ],
+      "img": "assets/img/uploads/a04ba79c47d243d38260ef4ba666cfb8.jpg"
     }
   }
 ];
